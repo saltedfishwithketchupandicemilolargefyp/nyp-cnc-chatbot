@@ -1,66 +1,79 @@
-
-from langchain_community.document_loaders import DirectoryLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.schema import Document
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain_openai import OpenAIEmbeddings
-from langchain_community.vectorstores import Chroma
-import openai 
-
-from dotenv import load_dotenv
 import os
-import shutil
+import numpy as np
+import nltk
+nltk.download('punkt')
+
+# loading the extracted text
+from langchain.document_loaders import TextLoader
+
+# splitting text into chunks
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+
+# for embedding the chunks
+from langchain_community.embeddings import HuggingFaceBgeEmbeddings
+
+# to store all embedded chunks into a vector store
+from langchain_community.vectorstores import FAISS
+
+# hugging face llm pipeline
+from langchain_community.llms import HuggingFacePipeline
+
+# for question answering
+from langchain.chains import RetrievalQA
+from langchain.prompts import PromptTemplate
+
 
 # Load environment variables. Assumes that project contains .env file with API keys
 load_dotenv()
 #---- Set OpenAI API key 
 # Change environment variable name from "OPENAI_API_KEY" to the name given in 
 # your .env file.
-openai.api_key = os.environ['OPENAI_API_KEY']
-
-CHROMA_PATH = "chroma"
-DATA_PATH = "modelling\data"
 
 
 def main():
-    generate_data_store()
+    generate_data_vectorstore()
 
 
-def generate_data_store():
+def generate_data_vectorstore():
     documents = load_documents()
     chunks = split_text(documents)
-    save_to_chroma(chunks)
+    save_to_faiss(chunks)
 
 
 def load_documents():
-    loader = DirectoryLoader(DATA_PATH, glob="*.txt")
+    # loading the extracted_text.txt file
+    loader = TextLoader('./extracted_text.txt')
     documents = loader.load()
     return documents
 
 
 def split_text(documents: list[Document]):
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=300,
-        chunk_overlap=100,
+        chunk_size=500,
+        chunk_overlap=200,
         length_function=len,
-        add_start_index=True,
-    )
+        add_start_index=True)
+    
     chunks = text_splitter.split_documents(documents)
     print(f"Split {len(documents)} documents into {len(chunks)} chunks.")
-
-    document = chunks[10]
-    print(document.page_content)
-    print(document.metadata)
+    
+    # for testing and reviewing the different chunks
+    # document = chunks[10]
+    # print(document.page_content)
+    # print(document.metadata)
 
     return chunks
 
 # embeddings model
-model_name = "sentence-transformers/all-mpnet-base-v2"
 
-hf = HuggingFaceEmbeddings(model_name=model_name)
+huggingface_embeddings = HuggingFaceBgeEmbeddings(
+    model_name="BAAI/bge-small-en-v1.5",  # alternatively use "sentence-transformers/all-MiniLM-l6-v2" for a light and faster experience.
+    model_kwargs={'device':'cpu'}, 
+    encode_kwargs={'normalize_embeddings': True}
+)
 
 
-def save_to_chroma(chunks: list[Document]):
+def save_to_faiss(chunks: list[Document]):
     # Clear out the database first.
     if os.path.exists(CHROMA_PATH):
         shutil.rmtree(CHROMA_PATH)
