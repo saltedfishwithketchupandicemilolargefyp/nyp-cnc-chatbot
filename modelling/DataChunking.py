@@ -88,6 +88,3 @@ def save_to_faiss(chunks: list[Document]):
 
 if __name__ == "__main__":
     main()
-
-
-
