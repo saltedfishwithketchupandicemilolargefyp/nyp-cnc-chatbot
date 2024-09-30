@@ -3,7 +3,7 @@ import shutil
 
 # Define source and target directories
 source_dir = 'CNC chatbot'  # Source folder where your files are located
-target_dir = 'data2'         # Target folder to store the separated files
+target_dir = 'data'         # Target folder to store the separated files
 
 # Create subdirectories in the target 'data' folder for each file type
 file_types = ['pdf_files', 'docx_files', 'xlsx_files', 'pptx_files']
