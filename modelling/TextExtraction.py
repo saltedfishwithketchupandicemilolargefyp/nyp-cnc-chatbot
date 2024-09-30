@@ -86,7 +86,7 @@ pptx_text = get_pptx_text(pptx_files)
 xlsx_text = get_xlsx_text(xlsx_files)
 
 # Define the output file for all extracted text
-output_file = os.path.join('modelling\data', 'extracted_text.txt')
+output_file = os.path.join('modelling', 'extracted_text.txt')
 
 # Function to store all extracted text into one file
 def save_all_text_to_file(texts, file_name):
