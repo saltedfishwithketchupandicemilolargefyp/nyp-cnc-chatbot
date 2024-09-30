@@ -19,7 +19,8 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 def main():
     documents = load_text(DATA_PATH)
     chunks = split_text(documents)
-    create_db(chunks)
+    split_chunked = split_list(chunks, 166)
+    create_db(split_chunked)
 
 # Loading the extracted_text.txt file
 def load_text(DATA_PATH):
@@ -41,23 +42,26 @@ def split_text(documents: list[Document]):
 
     return chunks
 
-def create_db(chunks):
+def split_list(chunks, batch_size):
+    for i in range(0, len(chunks), batch_size):
+        yield chunks[i:i + batch_size]
+
+
+def create_db(split_chunks):
     if os.path.exists(CHROMA_PATH):
         shutil.rmtree(CHROMA_PATH)
 
     # Create a new DB from the documents with the specified embedding function
     # embeddings = get_embedding_model(embedding_model)  # Retrieve the embedding model
-    db = Chroma.from_documents(chunks, OpenAIEmbeddings(), persist_directory=CHROMA_PATH)
+    
+    for chunk in split_chunks:
+        db = Chroma.from_documents(
+            documents=chunk,
+            embedding=OpenAIEmbeddings(),
+            persist_directory=CHROMA_PATH,
+        )
 
-    # Batch size limit
-    max_batch_size = 166
-
-    # Add chunks in smaller batches
-    for i in range(0, len(chunks), max_batch_size):
-        batch = chunks[i:i + max_batch_size]
-        db.add_texts(batch)  # Adjust this line if necessary.
-
-    print(f"Added {len(chunks)} chunks to the database.")
+        print(f"Added {len(chunk)} chunks to the database.")
 
 
 if __name__ == "__main__":
