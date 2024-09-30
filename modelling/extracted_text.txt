@@ -1,0 +1,1688 @@
+Cybersecurity
+
+IM Policy
+
+Awareness
+
+Advisories and Alerts
+
+Data Governance
+
+eNewsletter
+
+ICT Incident Management
+
+CyberSecurity 
+
+Note:
+
+Information and data shared in this site may be class ified or sensitive. These   publications and documents are intended for NYP Staff only. Please do NOT download and
+
+others. 
+
+ Awareness
+
+FY23 WOG Simulated Phishing Email Scenarios
+
+The below shows the emails that were used  in the FY23 WOG Simulated Phishing Email Scenaios. The tell-tale signs are highlighted with red outline. 
+
+Remember: Always think and verify before you click. Report  if in doubt! 
+
+Scenario 1 - Unusual sign-in activity
+
+Scenario 2 - Free vouchers
+
+Scenario 3 - Mailbox Full
+
+How to spot a phishing email   ?
+
+Phishing is a cybercrime in which a target or targets are contacted by email, telephone or text message by someone posing as a legitimate institution to lure individual
+
+sensitve data such as personally identifiable information, banking and credit card details, and passwords. The information is then used to access important accounts an
+
+identity theft and financial loss.
+
+Common Features of Phishing Emails
+
+1. Too Good To Be True - Lucrative offers and eye-catching or attention-grabbing statements are designed to attract people’s attention immediately. For instance, 
+you have won an iPhone, a lottery, or some other lavish prize. Just don't click on any suspicious emails. Remember that if it seems to good to be true, it probably
+2. Sense of Urgency - A favorite tactic amongst cybercriminals is to ask you to act fast because the super deals are only for a limited time. Some of them will even 
+have only a few minutes to respond. When you come across these kinds of emails, it's best to just ignore them. Sometimes, they will tell you that your account w
+unless you update your personal details immediately. Most reliable organizations give ample time before they terminate an account and they never ask patrons t
+personal details over the Internet. When in doubt, visit the source directly rather than clicking a link in an email.
+
+3. Hyperlinks - A link may not be all it appears to be. Hovering over a link shows you the actual URL where you will be directed upon clicking on it. It could be com
+
+or it could be a popular website with a misspelling, for instance www.bankofarnerica.com - the 'm' is actually an 'r' and an 'n', so look carefully.
+
+4. Attachments - If you see an attachment in an email you weren't expecting or that doesn't make sense, don't open it! They often contain payloads like ransomwa
+
+viruses. The only file type that is always safe to click on is a .txt file.
+
+5. Unusual Sender - Whether it looks like it's from someone you don't know or someone you do know, if anything seems out of the ordinary, unexpected, out of c
+
+suspicious in general don't click on it! 
+
+The example below was an email that was being used in the recent WOG Simulated Phishing Exercise. The email was crafted to look like a genuine request to check for
+
+activity' and sent using a masqueraded authority source - Microsoft Cloud 365 Security. 
+
+The tell-tale signs are highlighted in red.
+
+ It can be really difficult to spot a phishing email as technologies and techniques of malicious actors improve. Below are more red flags that you should look out for . 
+
+Remember: Always think and verify before you click. Report  if in doubt! 
+
+Cyber Security Training 
+
+Click image below to access w      ww.learn.gov.sg to complete BDLCD1: Cyber Security, BDLCD2: Data Protection, BDLCD3: Incident Management modules. You are strongl
+
+watch BDLCD4: Cyber Tips on How to Spot Phishing (2 mins)
+
+and BDLCD5: Cyber Tips on Strong Passwords and Enabling 2FA (1 min), for useful cyber hygiene tips.
+
+Tips: You may wish to refresh your knowledge on cyber security and data protection, click here for the 3 e-learning modules that will bring you up to speed before atte
+
+Using Data Securely 2019 
+Cyber and Data Security Awareness Briefing 2019
+
+    
+ 
+ 
+Cyber and Data Security Awareness Briefing 2020
+Cyber and Data Security Awareness Briefing 2021 
+Information Protection & Security Awareness 2021
+Advisory on Using Commercial Messaging Platforms for Work Collaboration and Coordination 2021  
+
+Advisories and Alerts
+
+GITSIR's Security Announcements for Last and Prevailing Months
+NRIC Advisory Guidelines for Public Sector Agencies 
+
+How to Go Safe Online
+
+https://www.csa.gov.sg/gosafeonline
+  https://facebook.com/gosafeonline
+https://twitter.com/gosafeonline 
+
+Note:
+
+Information and data shared in this site may be class ified or sensitive. These   publications and documents are intended for NYP Staff only. Please do NOT download and
+
+others. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Restricted and Non-Sensitive
+The site is currently undergoing review
+
+Data Management Committee (DMC) 
+
+    Roles and Responsibilities
+
+Roles  
+
+  Members
+
+ Responsibilities
+
+ Data Management
+Committee
+(nyp-dmc@nyp.edu.sg 
+)
+
+  CIO, CISO , CDO, CNC
+Directorate
+(+ Data Owner)
+
+1) Provides a platform for data harmonisation or resolution, and
+
+supports data governance efforts with focus on compliance, data
+
+quality and data classification, to ensure proper translation,
+
+contextualisation and implementation of strategies, initiatives and
+
+policies decided at the IDSC.
+
+2) The process could be initiated by CDO, CIO or any Data Owner, as
+
+and when the need arises.  A discussion among relevant
+
+parties should be conducted with the objective  to reach mutual
+
+consent based on generic principles such as adherence to SG-DRM
+
+standard and to minimize duplication.
+
+3) The resolution chosen should take into considerations such
+
+as impact, in terms of cost, effort and long-term sustainability issues.   
+
+ 
+Governance Structure - NYP Level 
+
+Restricted and Non-Sensitive
+The site is currently undergoing review
+
+  The structure depicts the involvement of the entire NYP team in our data governance effort, from PCEO to individual staff who handles data.
+
+At the top, PCEO chairs the ICT and Digitalisation Steering Committee (IDSC) which provides the platform to deliberate strategic issues and direction for NYP to achieve its key
+
+mission.
+
+The IDSC, with guidance and support from the ministry family and Whole-of-Government (WOG), work closely with relevant appointment holders, CIO, CISO, CDO and CNC
+
+Directorate, to ensure compliance, improve data quality, consistent classification and to encourage usage to enhance service delivery and operational efficiency; through the
+
+work of various data projec teams which will be built up gradually into our Data Community.
+
+On governance, our focus is on leadership and accountability where the senior leadership team takes responsibility in providing the direction and driving NYP towards a data-
+
+driven organisation.  Supported by a clearly defined structure, and their corresponding roles and responsibilities, the team can work together towards achieving our strategic
+
+intent.  
+
+Two committes, shown in the data governance structure figure above, are established to ensure proper translation, contextualisation and implementation of strategies,
+
+initiatives and policies decided at the IDSC. 
+
+The Data Management Committee (DMC)  will focus on compliance, data quality and classification issues, while
+
+the Data Application Committee (DAC) will look after the exploitation and usage aspects of our data. 
+
+Information Classification & Handling Policy 
+
+Restricted and Non-Sensitive
+The site is currently undergoing review
+
+    1   .0
+
+Purpose 
+
+1.1
+
+To define the information classification and handling policy for information assets.
+
+2.0
+
+Scope
+
+2.1
+
+For NYP staff who are involved in the handling of information assets.
+
+3.0
+
+Officer-in-charge
+
+3.1
+
+CNC is responsible for the maintenance and updating of this policy.
+
+4.0
+
+Information Classification and Handling Policy
+
+4.1 Information Asset Classification and Control
+
+4.1.1 Information assets should be appropriately classified and managed to prevent unauthorised access,
+modification and destruc tion. The Singapore Government Security Instruction for the Handling
+and Custody of Classified Information should be referred to.
+
+4.1.1.1
+
+All information assets should be identified. If assets are not identified and documented,
+they may not be given adequate protection.
+
+4.1.1.2
+
+The security classification of the information asset should be documented. This is to make
+clear the level of protection required for that information asset. In addition, it should also
+include the sensitivity categorisation which considers the impact of unauthorised disclosure
+of entity data, which comprises data on individuals and business.
+
+4.1.1.3
+
+Information assets shall be security graded solely on its content and security implications
+
+according to the following classifications:
+
+- Official (Open)
+
+- Official (Closed)
+
+- Restricted
+
+- Confidential
+
+- Secret
+
+- Top Secret
+
+4.1.1.4
+
+Information assets shall be categorised according to the following Sensitivity:
+
+- Sensitive High (causes serious physical, financial, or sustained emotional injury or social
+
+stigma to the individual; causes sustained financial loss to business)
+
+- Sensitive Normal (causes temporary and minor emotional distress or disturbance to the
+
+individual; causes a reduction in competitiveness or a compromise of business interests)
+
+- Non-Sensitive (does not cause physical, financial, or emotional injury to the individual; OR
+
+in personal information that is socially expected to be openly available; Does not impact a
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+business' processes or operations; OR is Business information that is socially accepted as
+
+openly available)
+
+4.1.1.5
+
+Please click 
+
+here to refer to the Guide to Right-Classification of Systems
+
+ 4.1.2  Any information asset bearing a security classification such as Restricted, Confidential, Secret, or Top
+
+Secret is a classified information asset.
+
+ 4.1.3  Information assets in NYP as endorsed by NYP IT and Digitalisation Steering Committee is mainly non-
+
+national security information in which case if it is classified, the security classification should either be
+- Restricted or
+- Confidential 
+
+ 4.1.4 Ple ase click 
+
+here to refer to the Security Classification and Sensitivity Categorisation for NYP
+
+Application Systems.
+
+ 4.1.5   Information assets are classified in NYP as follows:
+
+Info Type
+
+Informa tion  Assets
+
+Student & Course-
+related  
+
+BOG Papers
+
+Course Proposals (*1)
+
+Agreements
+
+MOUs/Partnership Agreements Approval
+Papers (*2)
+
+Security, Sensitivity
+Classification
+
+Restricted, Sensitive Normal
+
+Restricted, Sensitive Normal
+
+Restricted, Sensitive Normal
+
+Financial
+
+Payroll Data
+
+Restricted, Sensitive Normal
+
+Personnel &
+Company-related
+
+Staff Salary
+
+Restricted, Sensitive Normal
+
+For Information Assets not listed in this table, they are "Official(Open) / Official(Closed)" by default.
+
+(*1) Before the course is launched
+(*2) MOUs/Partnership Agreements Approval Papers are generally Official (Closed).
+However,selected papers may be classified as Restricted, if the partner requests for it
+
+4.2 Information Labelling and Handling
+
+  4.2.1 Classified information should be handled with care and should not be left unattended. Classified
+
+information in softcopy should be kept on NYP-issued external electronic storage media that must be
+FIPS 140-2 Level 3 encrypted or equivalent standard with authentication and minimally AES-256 bit
+encryption enabled, and the storage media must be kept securely in the office.
+
+To minimise the risk of sensitive data being compromised on user devices, staff shall ensure that
+sensitive data can only be accessed through NYP’s or central Whole of Government secure platforms,
+where practicable.
+
+Where practical, staff shall utilise the approved central document collaboration platforms such as NYP
+Share Point or Singapore Government Document Collaboration Service (SG-DCS) for accessing,
+sharing and editing of documents containing data
+
+Where practical, staff shall utilise the approved data platforms of the GDA such as Analytics.Gov and
+Vault to access, share and analyse data.
+
+4.2.2 When information is printed, it should keep its security classification so that users can identify what
+
+document handling procedures need to be followed.
+
+ 
+ 
+ 
+ 
+- All classified material should be stamped or labelled accordingly.
+
+-
+
+Hardcopy output from user applications should show the security classification of the information
+being printed. This will ensure that the printed output will be given appropriate protection
+according to its security classification.
+
+- Hardcopy classified information should be kept under lock and key and not be left unattended.
+
+4.2.3 No person shall be given knowledge or possession of any classified information unless there is a need
+
+for him/her to know or possess such information. Hence, discussion on classified information should
+not be carried out in the presence of staff/vendors who are not supposed to know.
+
+4.2.4 Staff are not allowed to host, store or process classified information or materials in non-government
+
+facility including but not limited to public cloud, online services and messaging platform such as
+DROPBOX and Google Drive
+
+4.2.5 If public cloud or online services for unclassified information is to be subscribed, staff shall assess the
+
+risks of using these online services and storage facilities and ensure that no classified information is
+stored in these online services.
+
+Document No.: ICTS-03, Version:  17, Effective Date: 1 Aug 2023
+Updated By / Date: Nicole Yong / 21 Jul 2023
+Approved By / Date: IDSC Policy Work Group (IPWG) / 1 Aug 2023
+
+ 
+ 
+ 
+ 
+ 
+Data Governance 
+
+                                           Introduction  
+
+Restricted and Non-Sensitive
+The site is currently undergoing review
+
+ Why do we need Data Governance?
+Data has become so vital to the success of almost all organisations that many are implementing a Data Governance programme. Data is mostly used
+
+for  improving  operational  efficiency,  enhancing  customer  experience,  boosting  valuation  of  the  organisation  or  even  be  monetised.  When  done
+
+properly, it provides the means to manage the overall collection, use and disposal of data (i.e. data asset).  Organisations are getting serious about
+
+managing their data, such as improving data quality, understanding the meaning of the data, leveraging their data for competitive advantage, and
+
+treating data as the enterprise asset. The formal recognition of the need to have a structure, organisation, and resources in place to manage data and
+
+the actual implementation of that need has come to be known as Data Governance.
+
+For a pragmatic definition, Data Governance refers to the oversight of Quality, Compliance, and Security of data used in an enterprise. A sound data
+
+governance programme will include the following:
+
+1. A governing body - the NYP ICT & Data Steering Committee (IDSC  ) 
+2. A set of principles - our strategic intent and thrusts
+3. A set of policies and procedures - the NYP Data Management Policy 
+4. A plan to execute the programme with appropriate metrics - our strategic initiatives 
+
+The NYP Data Management Framework is developed to highlight the core functions and the operational emphases across the 5 phases of data life-
+cycle: from Data Acquisition, Data Fusion, Data Access & Distribution, Data Exploitation to Data Destruction.  The 4 horizontal enablers provide the
+support needed to carry out the work needed to realise the NYP Data Strategy.
+
+  Com  pliance
+A very important aspect of governance must be on compliance.  Various aspects within the IM for ICT&SS have to be coordinated between the CIO-
+CDO-CISO nexus, which forms the core of the Data Management Committee (DMC) .  The NYP Data Management Policy will provide the necessary
+guidance and standard for the DMC to implement data related work at NYP.
+
+    Data Security
+
+A Guide to Agencies for IM8 Policy on Data Management - "Requirements to Protect Personal Data" v1.0   and  another one on "
+
+Data Cla 
+
+ssification " was published on the 23rd April and 8th October 2020 respectively, to provide a general reference during our implementation processes. 
+In addition, the DMC has been working to upholding of the security of data that is entrusted in NYP.  This includes operations for:
+
+Data Collec t ion   
+Data Cl assification   
+Data Sharing
+Data Storage
+
+ 
+NYP Policies, Standards & Guidelines on Data 
+
+Restricted and Non-Sensitive
+The site is currently undergoing review
+
+1.   Data exploitation is a key pillar of “digital-to-the-core" in the Public Sector Transformation efforts. Central to NYP's
+data strategy is the exploitation of data to inform on policies and programmes, and improve operations and service
+delivery.
+
+2. Data exploitation, however, goes hand in hand with securing data. Citizens expect an efficient government to
+
+improve service delivery with data, and at the same time expect that their privacy will be protected. Ensuring that
+citizen data is properly managed and kept secure fosters their trust and confidence in our exploitation of data.
+
+3. This set of NYP data management policies and guidelines govern how NYP collects, stores, uses, shares and
+
+disposes data. They are adapted from IM8 and contextualised to equip officers in NYP's Corporate
+Departments/Schools with the knowledge and processes to manage and use data securely.      
+
+Restricted
+
+2019
+
+Sharing on:
+Guide to Right Classification
+
+OLD RCST Framework: does not define UNCLASSIFIED;
+data was over-classified to RESTRICTED or CONFIDENTIAL
+
+Restricted
+
+CLASSIFIED
+
+TOP SECRET
+Exceptionally grave damage  
+to national security
+
+SECRET
+Serious damage to national  
+interests/ security
+
+CONFIDENTIAL
+Serious damage to an  
+agency; some damage to  
+national interests
+
+RESTRICTED
+Some damage to an agency
+
+UNCLASSIFIED
+Residual of information that  
+is not classified as RCST
+
+Official Information:
+”All info that public officers acquire (except that which
+is already openly or publicly available), generate or
+cause to be generated in the course of their duties”
+
+Classified Information:
+”Official information that has been assigned a security
+classification, based on the potential damage or
+negative consequence of unauthorised disclosure”
+
+Source: From ISD Green Book
+
+Right Classification Guide: Part I – Security Classification
+Refer to the classification of official information and systems based on the RCST Framework set out in 
+the Green Book.
+
+Restricted
+
+T
+
+S
+
+C
+
+R
+
+OFFICIAL  
+
+INFORMATION
+
+To facilitate right-classification of Govt systems under the RCST
+Framework, two new markers have been introduced to further
+differentiate official information that are Unclassified:
+
+CLASSIFIED
+
+1. Official (Closed) 
+
+The unauthorised disclosure of information in this category will 
+have negligible or no impact to the agency functions, national 
+interests or national security. However, such information is not 
+disclosed to the public in the normal course of duty.
+
+2. Official (Open)
+
+Similar to Official Closed, except information is disclosed to 
+the public domain. An example is information found on 
+Data.gov.sg (open data).
+
+Official  
+(Closed)
+
+Official  
+(Open)
+
+UNCLASSIFIED
+
+Right Classification Guide: Part I – Security Classification
+Information Asset / Data Classification (for all IHLs)
+
+Restricted
+
+T
+
+S
+
+C
+
+R
+
+CLASSIFIED
+
+OFFICIAL  
+
+INFORMATION
+
+Official  
+(Closed)
+
+Official  
+(Open)
+
+UNCLASSIFIED
+
+In all IHLs (5 Polytechnics and ITE), there are only 3 levels 
+of classification under RCST framework, namely:
+• R 
+• O(C)
+• O(O)
+
+: Restricted
+: Official (Closed)
+: Official (Open)
+
+Right Classification Guide: Part I – Security Classification
+To determine the system’s security classification, we need to answer the questions below.
+
+Restricted
+
+Question 1
+Will any unauthorised disclosure of information in this system likely cause –
+Some disadvantages in negotiations affecting national interests; or
+Some disruption to national security; or
+Some disruption to services essential for public safety or maintenance of public 
+order; or
+Some disruption to the financial or economic system in Singapore?
+
+•
+•
+•
+
+•
+
+ Yes
+System is Confidential
+Examples: Criminal Record Office System, Diplomatic Bag System, Trade Database System
+
+ No
+Please proceed to Question 2.
+
+Right Classification Guide: Part I – Security Classification
+To determine the system’s security classification, we need to answer the questions below.
+
+Restricted
+
+Question 2
+Will any unauthorised disclosure of information in this system likely cause a disruption to your 
+agency’s critical process resulting in its inability to discharge its functions?
+
+ Yes
+System is Confidential
+Examples:
+Police Coast Gurad AEGIS System
+CUSTOMS Business Risk Profiling System
+Integrated Criminal Case Filing and Management System
+Customs Intelligence and Investigation System
+
+ No
+Please proceed to Question 3.
+
+Right Classification Guide: Part I – Security Classification
+To determine the system’s security classification, we need to answer the questions below.
+
+Restricted
+
+Question 3
+Will any unauthorised disclosure of information in this system likely cause a disruption to your 
+agency’s process resulting in a hindrance to discharge its functions?
+
+ Yes
+System is Restricted
+Examples:
+Port Traffic Management System
+Integrated Stamp Duty System
+HR Systems
+
+ No
+Please proceed to Question 4.
+
+Right Classification Guide: Part I – Security Classification
+To determine the system’s security classification, we need to answer the questions below.
+
+Restricted
+
+Question 4
+Do members of the public have to access to the information in this system?
+
+ Yes
+Please proceed to Question 5.
+
+ No, this system is completely inward-facing.
+System is Official (Closed)
+Examples:
+Office Administrative Systems/Staff Directory
+Staff Suggestion System
+Central Stationery Management System
+Room Booking System
+
+Right Classification Guide: Part I – Security Classification
+To determine the system’s security classification, we need to answer the questions below.
+
+Restricted
+
+Question 5
+What access do members of the public have to the information in this system?
+(For example, a portal that the public can use to search for information)
+
+ Full
+System is Official (Open)
+Examples:
+Archival Systems such as Parliamentary Reports
+PMO-PO Corporate Website
+
+ Partial
+System is Official (Closed)
+Examples:
+Online Feedback Platforms
+Portals for Application of Services, etc.
+Facility Booking Systems (e.g. for Sports, etc.)
+
+Decision Tree for Security Classification
+
+Restricted
+
+Right Classification Guide: Part II – Sensitivity Categorisation
+The Information Sensitivity Framework (ISF) considers the impact of unauthorised 
+disclosure of entity data, which comprises data on individuals and business.
+
+Restricted
+
+SENSITIVITY 
+Categorisation
+
+Sensitive High
+Serious damage to an 
+individual or business 
+(e.g. incriminating 
+information), if leaked.
+
+INDIVIDUAL
+
+BUSINESS
+
+Causes serious physical, financial, 
+or sustained emotional injury or 
+social stigma to the individual
+E.g.: Loss of life or physical harm; 
+loss of employability, reputation 
+and insurability; case information 
+that reveals the identity of 
+victims of sexual assault etc., 
+criminal or investigative records, 
+etc.
+
+Causes sustained financial loss
+E.g.: Inability to conduct normal 
+business operations, significant 
+and irreversible loss of 
+competitive advantage, major 
+damage to reputation.
+
+Right Classification Guide: Part II – Sensitivity Categorisation
+The Information Sensitivity Framework (ISF) considers the impact of unauthorised 
+disclosure of entity data, which comprises data on individuals and business.
+
+Restricted
+
+SENSITIVITY 
+Categorisation
+
+Sensitive Normal
+Some damage to 
+individual or business, if 
+leaked.
+
+INDIVIDUAL
+
+BUSINESS
+
+Causes temporary and minor 
+emotional distress or 
+disturbance to the individual
+E.g.: Locational information, 
+photographic images, etc.
+
+Causes a reduction in 
+competitiveness or a 
+compromise of business 
+interests
+E.g.: Loss of potential business 
+opportunities, some damage to 
+reputation.
+
+Right Classification Guide: Part II – Sensitivity Categorisation
+The Information Sensitivity Framework (ISF) considers the impact of unauthorised 
+disclosure of entity data, which comprises data on individuals and business.
+
+Restricted
+
+SENSITIVITY 
+Categorisation
+
+Non-Sensitive 
+Negligible or no damage 
+to an individual or 
+business, if divulged.
+
+INDIVIDUAL
+
+BUSINESS
+
+Does not cause physical, 
+financial, or emotional injury to 
+the individual; OR in personal 
+information that is socially 
+expected to be openly available.
+
+Does not impact a business’ 
+processes or operations; OR is
+Business information that is 
+socially accepted as openly 
+available.
+
+Decision Tree for Information Sensitivity Classification
+
+Restricted
+
+Sensitive High
+
+Sensitive High
+
+Sensitive Normal
+
+Non Sensitive
+
+Data Architecture 
+
+     Introduction
+
+Restricted and Non-Sensitive
+The site is currently undergoing review
+
+Data Architecture can be considered as a key enabler in the NYP Data Management Framework, making it possible for NYP to do more for its key stakeholders, with improved
+
+outcomes.
+
+An essential consideration in developing data architecture of an organisation must be on how it can be used to effectively and efficiently represent the core business processes,
+
+where data is collected, created, processed, used, distributed, stored and disposed.  
+
+The importance of data architecture resembles that of building architecture which shows the layout of building boundaries, the water piping, electrical power supply, the
+
+lighting and the HVAC systems.  It provides critical information on the what, where, who, when and how of data in an organisation.
+
+A reasonable approach its alignment with NYP's Vision and Mission.
+
+Alignment with NYP Vision and Mission
+
+   Enterprise Report Data 
+
+As part of its operations, NYP communicates its progress by tracking and reporting specific data at various channels and platforms.  Such data need to be clearly and
+
+consistently defined to facilitate a common vocabulary in meetings and discussions.  
+
+Model Structure
+
+There are many different definitions of data architecture with each description based on one's understanding and interpretation. The most succinct and all-encompassing
+version is given by The Open Group Architecture Framework (TOGAF) which says that data architecture is 'composed of models, policies, rules or standards that govern which
+data is collected, and how it is stored, arranged, integrated, and put to use in data systems and in organizations.' 
+
+With the amount of data generated online increasing by the day as a result of technological advances in internet connectivity, electronic storage and computing power, business
+leaders with wisdom and foresight will do well to ensure that their critical asset, data, is managed in a structured and organised manner, according to the definition of data
+architecture. In the simplest terms, the primary benefit of data architecture is this: it provides a systematic and well-defined way of managing organisational data assets.
+
+A 4-level structure was adopted in out hierarchically arranged 'Categorical Model':
+
+1. Subject Area - This is the core data of the organisa on, NYP’s life and blood.
+2. Aspect - Perspec ves or views of func onal areas within each subject area whose names bear close resemblance to business processes. It also serves as containers
+
+to group lower level data into an organised structure.
+3. Category - This is the actual data object in the data model.
+4. Sub-category - This level represents the a ributes of the data object – the raw values that determine the characteris cs of the object
+
+Data models at different levels can be used for different purposes.  Generally, levels 1 and 2 are typically used for strategic and business discussions.  It is possible that business
+
+strategy discussion could make it necessary to identify new data that does not exist, to facilitate new initiatives, or the improvement of existing delivery outcomes and services. 
+
+For such cases, a broad overview of our operational processes and the associated data would be more useful.  
+
+ On the other hand, application development and data infrastructure teams would require details about the data types, formats, size, volume etc to facilitate their technical
+
+implementation work.  For these, data models at levels 3 and 4 would be necessary.
+
+    Conceptual/Logical Model - an overview
+
+ The figure below showed an overall view of the conceptual model, and the hierarchical expansion of the Subject Area of 'Learner'.
+
+Modelling Process
+
+Six Subject Areas were first identified, based on their impact, resource constraints and knowledge of the processes.  Other Subject Areas will be developed along the way.
+
+The modelling process would typically involve the data ownership team, including the management, subject matter experts and data stewards.  A typical process would include: 
+
+1. Data modelling team created a simple data model for the Subject Area, based on available information;
+2. Co-development of the data model with the data stewards and subject matter experts.  This is a discovery process where data stewards were encouraged to verbalise the
+
+process details as well as data entities involved.  This would enhance the acceptance level of the eventual model;
+
+3. A fine-tuning process with the data ownership team, followed by their endorsement.  This process would enable the management team to look at the model from the
+
+logical and communication perspective.  This would be useful from harmonisation of vocabulary, roles and responsibility perspective.  
+
+Work has been done on the following data models (of varying levels of details and completeness):
+
+1. HR
+2. Learner
+3. Course 
+4. Estate Management
+5. Procurement 
+6. Adm inistration
+
+Strategic Initiatives 
+
+Restricted and Non-Sensitive
+The site is currently undergoing review
+
+       Strategic Initiatives in NYP's Data Strategy
+Recap:
+NYP Data Strategy articulated 1 Strategic Intent, 4 Strategic Thrusts and 7 Strategic Initiatives in the following Table and Figure:
+
+1   Strategic Intent
+
+                                                                                Achieving NYP's Key Mission    
+
+4  Strategic Thrusts
+
+ NYP Data Architecture
+
+ Digital Infrastructure
+
+ Build Capabilities and Democratise Use
+
+ Support Public-Privat e Partnerships
+
+7  Strategic Initiatives
+
+- Stock-Take
+- Data Architecture  
+
+- Data Governance
+- Data Integration
+
+- Data Sharing and Distribution
+- Data Capabilities
+
+- Public-Private Partnerships
+
+Stock-Take 
+
+Restricted and Non-Sensitive
+The site is currently undergoing review
+
+    Data stock-taking will be an ongoing process because of the large amount of data involved.  Data owners and their teams
+
+will be involved as they have the domain knowledge and the operation experience to prioritise the stock-taking process. 
+
+  The process:
+
+1.     The engagement with data owners started with HR, RGO, EM, SDAR and will continue to expand;
+
+2.     Information gathering templates, in alignment with SG-DRM, are provided to the data owners and their teams;
+
+3.     Discussions will be organised to resolve issues such as classification, completenesss and possible need for
+
+harmonisation, etc;
+
+4.     Finalised lists will be uploaded onto a centralised metadata listing site, which will be
+
+eventually incorporated into our Data Calatlog;
+
+5.     The NYP Data Catalog will be open for staff to view and sample data segments can be provided for users to
+
+test.
+
+Uploading Datasets on Vault 2021
+
+Attachments:
+
+FCM12-2013-Annex-D-Stocktake_template 
+NYP Information gathering templates  
+
+
+NYP Systems Security Classification and Sensitivity Categorisation
+
+
+
+No. System Name Info Security Classification Sensitivity Categorisation 
+1 ACI Website Official Open Non-Sensitive 
+2 Analytics in Education (AIE) Official Closed Sensitive (Normal) 
+3 Alumni Information Management System (AIMS) Official Closed Sensitive (Normal) 
+4 Learning Management System Official Closed Sensitive (Normal) 
+5 CET Revenue System Official Closed Sensitive (Normal) 
+6 Clinical Funding Administration System (CFAS) Official Closed Sensitive (Normal) 
+7 Co-Curricular Activities Points System (CCAPS) Official Closed Non-Sensitive 
+8 Customer Relationship Mgmt System Official Closed Non-Sensitive 
+9 Declaration for Conflicit of Interest in Academic Matters System Official Closed Non-Sensitive 
+10 ECG Case Registry and Administration System (CRAS) Official Closed Sensitive (High) 
+11 Edusave Awards Administration System Official Closed Sensitive (Normal) 
+12 Electronic Small Value Purchase System Official Closed Non-Sensitive 
+13 EM Service Request Workflow & Reports Official Closed Non-Sensitive 
+14 ePayment Gateway Official Closed Sensitive Normal 
+15 eSupport System Official Closed Non-Sensitive 
+16 External Works/Activities Application System Official Closed Sensitive (Normal) 
+17 Facility Reservation System (FRS) Official Closed Non-Sensitive 
+18 Finance Revenue System Official Closed Sensitive (Normal) 
+19 Financial Arrangement Request System (FARS) Official Closed Sensitive (Normal) 
+20 Financial Assistance Administration System (FAAS) Official Closed Sensitive (Normal) 
+21 Financial Assistance Scheme for Overseas Programme (FASOP) System  Official Closed Sensitive (Normal) 
+22 Fitness Assessment Management System (FAMS) Official Closed Non-Sensitive 
+23 Gift Declaration Workflow System Official Closed Non-Sensitive 
+24 I Appreciate System Official Closed Non-Sensitive 
+25 Incident Management System Official Closed Sensitive (Normal) 
+26 Information Portal for Research, Innovation and Enterprise (IRIE) Official Closed Sensitive (Normal) 
+27 Innovative Staff Suggestion System (i3S) Official Closed Non-Sensitive 
+28 Integrated Customer Experience Management System  Restricted Sensitive (High) 
+29 IT HelpDesk System Official Closed Non-Sensitive 
+30 Joint-Polytechnic Admission System - Early Admission Exercise Official Closed Sensitive (Normal) 
+31 Library Management System (LMS) Official Closed Non-Sensitive 
+32 Lifelong Learning Information Management System (LLIMS) Official Closed Sensitive (Normal) 
+33 Maintenance Contract Tracking System Official Closed Non-Sensitive 
+34 Module Evaluation & Feedback System Official Closed Sensitive (Normal) 
+35 NYP Alumni Portal Official Closed Sensitive (Normal) 
+36 NYP Homepage Official Open Non-Sensitive 
+37 Financial Assistance for Notebook Purchases Official Closed Sensitive (Normal) 
+38 Overseas Programme Administration System (OPAS) Official Closed Sensitive (Normal) 
+39 Scholarship Administration & Mgmt System (SAMS) Official Closed Sensitive (Normal) 
+40 SIRS Website Official Open Non-Sensitive 
+41 Staff Email System Restricted Sensitive (High) 
+42 Staff Portal Official Closed Sensitive (Normal) 
+43 Statement of Absence (SOA) System Official Closed Sensitive (Normal) 
+44 Student Information Management System (SIMS) Official Closed Sensitive (High) 
+45 Student Life Event Info System Official Closed Non-Sensitive 
+46 Student Portal Official Closed Sensitive (Normal) 
+47 Ultimus Workflow System Official Closed Non-Sensitive 
+48 Wellness Management System Official Closed Non-Sensitive 
+49 WITs Administration System  Official Closed Non-Sensitive 
+50 Workflow System for Exams Office  Official Closed Sensitive (High) 
+
+Computer & Network Center (CNC)
+
+
+Staff Induction
+
+Infra, Info System and Security Services Overview
+Contact Me
+Email: thomas_chia@nyp.edu.sg
+Ext 0270
+LinkedIn: https://www.linkedin.com/in/thomaschiahk
+
+NYP Security Team
+Email: nyp-cnc-security@nyp.edu.sg
+
+Helpdesk 6550 0099
+About Me
+Asst Director, ICT Governance, Cybersecurity & Digital Workplace
+ACISO (Agency Chief Information Security Officer)
+Hello Colleagues, Welcome Aboard Team NYPName is Thomas / Hong Kit. Don’t call me HK la hor….the word association not very nice
+I lead the Cyber Security Team in CNC together with 3 other colleagues. There’s another Thomas in CNC, Thomas Kua so please don’t get mixed up
+I just joined NYP in Dec 2021 so im 5 months old. I was previously from DBS
+Looking forward to work with you in the coming days hopefully…
+
+Security issues email us or call me
+Issues with your GFE issued devices, or accounts please call helpdesk.
+
+
+
+
+
+
+
+
+
+     NYP 10G MPLS
+          Network 
+
+
+10Gbps
+Video Conference + Teams Telephony
+Student
+
+GeBiz
+Govt Intranet
+Wireless on WiFi6
+
+Broadband
+
+
+    VPN
+Windows 10
+2000Mbps
+(Virtualisation Infra + GCC) 
+Windows 
+Applications
+NYP’s ICT Infrastructure Overview
+
+
+4000Mbps 
+
+Staff
+
+(Virtualisation Infra) 
+
+M365 +Exchange
+Online 
+
+
+2 Gigabit link
+6 Gigabit link
+
+
+
+Internet
+Internet
+Global Switch
+NYP Info System, 
+Student e-Services
+
+2000Mbps
+
+
+
+Future of Workplace - What your desk will look like soon
+Choose your own BYOD, we want to give you a choice to choose with device do you want to use, with this, it also means that we are moving away from passwords, using face and fingerprints for logon, 
+Cloud PC – always on machine in the cloud to use, a highly secured space for you to work anywhere
+5
+Cloud PC
+Combine the power and security of the cloud with the versatility and simplicity of the PC. 
+Personalize your Cloud PCs
+Setup your Cloud PC to use your preferences
+Changes made will remain in place between sessions
+Take it with you
+Use your Cloud PC from any desktop or tablet, anywhere around the world
+Accessing your Cloud PC won’t make changes to the host computer
+
+
+
+Your data is protected
+All your files and programs are secured
+Regular backups and patching automatically performed
+6
+Cloud VPN
+
+Simplified experience, click connect > MFA > done!
+
+Continuous monitoring, we can quickly identify and respond when something is slow
+
+Better security with Continuous verification & Inspection
+
+
+7
+WIFI 6
+
+
+
+
+
+Garden area, P1, WIFI better and faster (3G to 5G)
+Acceptable Use Policy
+The responsibility for proper and safe usage of ICT resources such as but not limited to Endpoint Devices, Email, Internet and Network systems in Nanyang Polytechnic (NYP) as well as Whole-of-Government (WOG) environment, requires the cooperation of every officer, as any security breach on the part of individual officer can undermine the security of the entire organisation.
+
+Some important points to note
+
+NYP shall have the right to access and disclose staff data stored on Government Furnished Equipment (GFE) and Email messages of staff. 
+
+NYP shall have the right also to control, monitor and disclose staff use of NYP IT resources. 
+
+Staff shall read through and observe closely the following Policies on Electronic Mail, Endpoint Devices, Internet Access, and access to Government Enterprise Networks (GEN). 
+
+Users shall be accountable for their passwords and not disclose their user accounts and passwords to others. 
+
+Passwords shall be compliant with NYP Password Standard and Guidelines. 
+
+Users shall ensure they keep themselves updated with the latest version of the Acceptable Use Policy of IT Resources.
+
+
+Please read through the full Acceptable Use Policy here.
+
+Visit NYP ICT Policies for other policies
+
+
+Cybersecurity Awareness - Phishing
+What is Phishing?
+Phishing is a cybercrime in which a target or targets are contacted by email, telephone or text message by someone posing as a legitimate institution to lure individuals into providing sensitive data such as personally identifiable information, banking and credit card details, and passwords. The information is then used to access important accounts and can result in identity theft and financial loss.
+Common Features of Phishing Emails
+Too Good to be True
+2.    Sense of urgency
+3.    Hyperlinks
+4.    Attachments
+5.   Unusual Sender
+
+Cybersecurity Awareness - Phishing
+Example of a Phishing Email
+
+Cybersecurity Awareness - Phishing
+It can be really difficult sometimes to spot a phishing email….
+How to stay safe when you receive an unsolicited email?
+ 
+Ask yourself the following
+Do you know the sender? 
+Did you request for the information?
+If you know the sender, call the sender to verify if the email was indeed sent by him.
+Why is there an urgency?
+What is it asking me to do?
+Do not click on URL links in emails or text messages. Hover your mouse over the link to see destination URL, if it is legitimate.
+Do not share sensitive and personal information without verification
+Never share confidential information such as OTPs or passwords with anyone.
+ 
+REMEMBER: ALWAYS THINK BEFORE YOU CLICK. Report it if you are unsure.
+
+
+Incident Management
+
+ICT and Security WorkGroup (ISWG)
+Staff reports to ISWG immediately.
+
+ISWG works closely with SIROs.
+
+SIROs must have oversights of all incidents discovered by members of the public (MoP), monitoring tools and NYP stakeholders (Staff, Learners, etc...)
+
+SIROs provide status updates to ACISO/ASO.
+
+
+Incident Management
+It is important to stay calm if you encounter a suspected security incident and report the incident to the right people, through the right channels. 
+
+Always remember to:
+Stay calm and disconnect your computer from the network.
+
+Gather any evidence you can and report to your RO and inform NYP Security Team https://for.edu.sg/nyp-reportcyber
+
+NYP Security Team will contact you and work closely with you to resolve the issue	 	 
+
+Data Classification
+
+Why do we need perform Data Classification?
+
+Data is at the core of the Digital Transformation of the Public Sector. We must use,
+Share and safeguard data entrusted to us. Safeguarding the data that we use and share
+is vital to the public’s trust in the Government’s use of data.
+
+REMEMBER: Every office is responsible for the data they use and that is shared with them
+Why do we need to classify and mark official information?
+
+Classifying and marking official information is to highlight the presence of classified
+Information and to ensure that the classified information is protected with the appropriate
+Safeguards.
+For more information visit Using Data Securely.pdf (sharepoint.com)
+
+Understanding the Security Levels
+Security levels measure the damage done to an agency and/or national security and interests
+Understanding the Sensitivity Levels
+Sensitivity levels measure the damage done to an entity  (individual and/or business)
+Decision Flowchart
+
+
+
+DATA-SHARING : SUMMARY SHEET 
+
+Please indicate the total number of datasets held by your Ministry HQ and each of your Statutory Boards/Departments,  
+as well as the number of datasets that are currently being shared with the public, and the number of datasets that are currently not being shared. 
+
+Agency  Total No. of Datasets No. of Datasets Shared Externally No. of Datasets Not Shared Externally 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TOTAL 
+DATA-SHARING: DETAILS OF DATASETS BY AGENCY 
+
+Please list down all datasets held by the agency and provide the requested details. 
+Use a separate spreadsheet for your Ministry HQ and each of your Statutory Board/Department.  
+
+
+S/N Name of dataset Is dataset being shared externally? [Y/N] Reason if dataset is not shared externally Timeline if there are plans to share the dataset Compliance to data-sharing principles (Y/N)* Rating on 5-Ticks rating scheme** Remarks 
+Principle 1 Principle 2 Principle 3 Principle 4 Principle 5 Principle 6 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* The data-sharing principles are: 
+1a) Internal Data-Sharing: Share all data as a default. (Except for those on the negative list) 
+1b) External Data-Sharing: Benchmark data-sharing efforts against countries at the forefront of “Open Data" 
+2) Make data easily available. All external data shared shall be accessible within 3 clicks or less via data.gov.sg. All free data shall be accessible without the need for additional steps like registration (with the exception of APIs). For data requiring registration, a sample shall be provided prior to registration. 
+3) A common terms of use. All data shared free-of-charge shall adopt data.gov.sg's Terms of Use. For chargeable datasets, terms of use should allow for co-creation and clearly stated before payment is collected. 
+4) Timely release of data. All data shall be made available as quickly as possible. Information on frequency of update shall be provided in the metadata. 
+5) Share data in machine-readable format. Data in HTML, PDF and Word are NOT machine-readable formats. 
+6) Share raw data. Data should be shared in as granular a form as possible. Data should also be re-usable for secondary purposes and combined with others to create mash-ups. 
+
+** 5 ticks scheme: 
+ü     data is available on data.gov.sg (in any format) 
+üü         data available is in machine-readable format 
+üüü   data available adopts data.gov.sg's TOUs. 
+üüüü  data available is as granular as possible 
+üüüüü data is available in the form of linked data 
+Data Stock-taking Summary Sheet 
+
+Please indicate the datasets that are regularly used by your department / school.   
+Examples of usage: 1. for annual submission to MOE, SSG, PSD etc 
+2. for management reporting 
+3. for publicity or for public information 
+
+Owner Dataset ID Dataset Name Usage Shared to Frequency 
+HR Age-Group and Length-Of-Service Profile 
+QPO NYP-KPI-LST-001 NYP_INDICATORS_KPI_DEFINITIONS NYP Management Dashboard NYP annual 
+HR NYP-KPI-EES-001 NYP_INDICATORS_KPI_EES NYP Management Dashboard NYP annual 
+RGO LEARNER-ADM-INT-002 Nanyang Polytechnic Student Enrolment, Annual Data.gov.sg Public annual 
+RGO LEARNER-ADM-PIT-001 Nanyang Polytechnic Planned Intake, Annual Data.gov.sg Public annual 
+RGO LEARNER-ADM-INT-001 Nanyang Polytechnic Student Intake, Annual Data.gov.sg Public annual 
+RGO Course-PET-DF-001 Full-time Diploma Courses Data.gov.sg Public annual 
+CIL3 Course-LLL--All-001 Lifelong Learning Courses for Adult Learners Data.gov.sg Public annual 
+RGO LEARNER-ADM-LAS-001 Nanyang Polytechnic GCE 'O' Level Aggregate Cut-Off_Points by Course Data.gov.sg Public annual 
+RGO LEARNER-GES-FG-2020 NYP GES 2020 for Graduates Class 2020 MOE Policy Analysis
+NYP Management Review GES Contractor 
+MOE annual 
+RGO LEARNER-GES-PNS-2020 NYP GES 2020 for Post NS Class 2017 MOE Policy Analysis
+NYP Management Review GES Contractor 
+MOE annual 
+RGO LEARNER GES-PG-2020 NYP GES 2020 for Poly Graduates Class 2015 MOE Policy Analysis
+NYP Management Review GES Contractor 
+MOE annual 
+RGO LEARNER-WSPOS-PPT-2020 NYP Work Study Programme Outcome Survey 2020 - Participants SSG Policy Analysis
+NYP Management Review WSPOS Contractor
+SSG annual 
+RGO LEARNER-WSPOS-EMP-2020 NYP Work Study Programme Outcome Survey 2020 - Employers SSG Policy Analysis
+NYP Management Review WSPOS Contractor
+SSG annual 
+HR STAFF-PLAN-PSD-001 Staff Strength and Movement Annual returns for analysis PSD annual 
+HR STAFF-PLAN-MOM-001 Labour Market Survey MOM Policy Analysis MOM annual 
+  
+Owner Dataset ID Dataset Name Date Created Last Updated Description Classification Frequency Coverage Start Coverage End Used By Subject Area 
+HR Age-Group and Length-Of-Service Profile To show the distribution of various age groups and length of service Classified – OC_NS Annual 1992-04-01 00:00:00 2019-10-18 00:00:00 Staff 
+QPO NYP-KPI-LST-001 NYP_INDICATORS_KPI_DEFINITIONS 2020-11-30 00:00:00 2020-11-30 00:00:00 KPI Definitions. Used in NYP Management Dashboard (NYPMD) Classified – OC_NS Ad-hoc 2019-01-01 00:00:00 2019-12-31 00:00:00 Viridis LIEW (NYP),#viridis_liew@nyp.edu.sg Corporate Governance 
+HR NYP-KPI-EES-001 NYP_INDICATORS_KPI_EES 2019-12-31 00:00:00 2019-12-31 00:00:00 Employee Engagement Survey Data for NYPMD Pending Biennial 2017-01-01 00:00:00 2018-12-31 00:00:00 Viridis LIEW (NYP),#viridis_liew@nyp.edu.sg Staff 
+RGO LEARNER-ADM-INT-002 Nanyang Polytechnic Student Enrolment, Annual 2019-08-19 00:00:00 2019-08-19 00:00:00 This dataset contains information on the student enrolment for Nanyang Polytechnic by semester Unclassified – OO Annual 2013-01-01 00:00:00 2019-12-31 00:00:00 Li Leng TAY (NYP),#tay_li_leng@nyp.edu.sg Learner 
+RGO LEARNER-ADM-PIT-001 Nanyang Polytechnic Planned Intake, Annual 2016-10-10 00:00:00 2019-08-19 00:00:00 This dataset contains information on the Planned Student Intake for Nanyang Polytechnic Unclassified – OO Annual 2016-01-01 00:00:00 2019-12-31 00:00:00 Li Leng TAY (NYP),#tay_li_leng@nyp.edu.sg Learner 
+RGO LEARNER-ADM-INT-001 Nanyang Polytechnic Student Intake, Annual 2016-12-12 00:00:00 2019-08-19 00:00:00 This dataset contains information on the student intake and enrolment for Nanyang Polytechnic by semester Unclassified – OO Annual 2013-01-01 00:00:00 2019-12-31 00:00:00 Li Leng TAY (NYP),#tay_li_leng@nyp.edu.sg Learner 
+RGO Course-PET-DF-001 Full-time Diploma Courses 2016-04-27 00:00:00 2019-08-19 00:00:00 List of full-time diploma courses that is offered by Nanyang Polytechnic. It includes the academic year that the course is being offered, course title and course code. Unclassified – OO Annual 2016-01-01 00:00:00 2019-12-31 00:00:00 Li Leng TAY (NYP),#tay_li_leng@nyp.edu.sg Course 
+CIL3 Course-LLL--All-001 Lifelong Learning Courses for Adult Learners 2016-07-08 00:00:00 2019-08-21 00:00:00 List of lifelong learning courses for adult learners Unclassified – OO Annual 2019-01-01 00:00:00 2019-12-21 00:00:00 Allyce LEE (NYP),#allyce_lee@nyp.edu.sg Course 
+RGO LEARNER-ADM-LAS-001 Nanyang Polytechnic GCE 'O' Level Aggregate Cut-Off_Points by Course 2016-12-08 00:00:00 2019-08-19 00:00:00 GCE 'O' Level Aggregate Cut-Off-Points (ELR2B2 points) is the net aggregate (after deducting CCA bonus points) of the lowest ranked students who were admitted to NYP through the Join Admission Exercise (JAE). Unclassified – OO Annual 2014-01-01 00:00:00 2019-12-31 00:00:00 Li Leng TAY (NYP),#tay_li_leng@nyp.edu.sg Learner 
+RGO LEARNER-GES-FG-2020 NYP GES 2020 for Graduates Class 2020 2021-04-07 00:00:00 Identifiable Individualised data for 2020 Poly GES Fresh Graduates (Core and Poly-specific questions) Sensitive Normal - Restricted Annual 2020-04-01 00:00:00 2020-09-30 00:00:00 Eryn_YEE (NYP),#eryn_yee@nyp.edu.sg Learner Name, Hashed NRIC, Gender, Race, Year of Birth, School, Diploma, Grad Year, Citizenship, Nationality, Entry Qualification, Mailing Address, Email Address, Home Tel / HP, Admin No., Tutorial Group, Personal Mentor
+
+NRIC, Polytechnic, Course of Study, Gender (male/female), NMC Cluster, Citizenship, Race, Responses to all questions (individual polytechnic will provide the respondent's NRIC and their polytechnic's specific questions) 
+RGO LEARNER-GES-PNS-2020 NYP GES 2020 for Post NS Class 2017 2021-04-07 00:00:00 Identifiable Individualised data for 2020 Poly GES Post NS (Core and Poly-specific questions) Sensitive Normal - Restricted Annual 2020-04-01 00:00:00 2020-09-30 00:00:00 Eryn_YEE (NYP),#eryn_yee@nyp.edu.sg Learner Name, Hashed NRIC, Gender, Race, Year of Birth, School, Diploma, Grad Year, Citizenship, Nationality, Entry Qualification, Mailing Address, Email Address, Home Tel / HP, Admin No., Tutorial Group, Personal Mentor
+
+NRIC, Polytechnic, Course of Study, Gender (male/female), NMC Cluster, Citizenship, Race, Responses to all questions (individual polytechnic will provide the respondent's NRIC and their polytechnic's specific questions) 
+RGO LEARNER GES-PG-2020 NYP GES 2020 for Poly Graduates Class 2015 2021-05-06 00:00:00 Identifiable Individualised data for 2020 Poly Tracer Survey (core and poly-specific questions) Sensitive Normal - Restricted Annual 2020-04-01 00:00:00 2020-09-30 00:00:00 Eryn_YEE (NYP),#eryn_yee@nyp.edu.sg Learner Name, Hashed NRIC, Gender, Race, Year of Birth, School, Diploma, Grad Year, Citizenship, Nationality, Entry Qualification, Mailing Address, Email Address, Home Tel / HP, Admin No., Tutorial Group, Personal Mentor
+
+NRIC, Polytechnic, Course of Study, Gender (male/female), NMC Cluster, Citizenship, Race, Responses to all questions (individual polytechnic will provide the respondent's NRIC and their polytechnic's specific questions) 
+RGO LEARNER-WSPOS-PPT-2020 NYP Work Study Programme Outcome Survey 2020 - Participants 2020-10-01 00:00:00 WSP Graduates 2019-05-01 to 2020-04-30
+ Sensitive Normal - Restricted Annual 2019-05-01 00:00:00 2020-04-30 00:00:00 Eryn_YEE (NYP),#eryn_yee@nyp.edu.sg Learner WSP Institution, School, CET Cluster, WSP Sector, WSP; Name, Hashed NRIC, Gender, Race, Year of Birth, Citizenship, Institution of Study Prior to WSP, Mailing Address, Email Address, Home Tel / HP, Name of Employer, Employer UEN, Employer Address, Employer Contact Person, Contact Number and Email, No. of Years that Employer is in WSP  
+RGO LEARNER-WSPOS-EMP-2020 NYP Work Study Programme Outcome Survey 2020 - Employers 2020-10-01 00:00:00 Employers Sponsoring WSP Graduates within period 2019-05-01 to 2020-04-30 Sensitive Normal - Restricted Annual 2019-05-01 00:00:00 2020-04-30 00:00:00 Eryn_YEE (NYP),#eryn_yee@nyp.edu.sg Industry WSP Institution, School, CET Cluster, WSP Sector, WSP; Name, Hashed NRIC, Gender, Race, Year of Birth, Citizenship, Institution of Study Prior to WSP, Mailing Address, Email Address, Home Tel / HP, Name of Employer, Employer UEN, Employer Address, Employer Contact Person, Contact Number and Email, No. of Years that Employer is in WSP  
+Data Source Dataset Column Name Business Term Description Security Classification Sensitivity Classification Format Validation Frequency Subject Area Usage Guidelines Item Type Path 
+RGO SIMS MODULE_DESC CourseModuleDescription Description of a module​ Official Open Non-sensitive Half yearly Course Item data/Lists/Business Glossary 
+RGO SIMS MODULE_TIMETABLE_SCHOOL_CODE CourseSchoolTimeTable School in which the module is offered​ Official Closed Sensitive Normal x(3) Half yearly Course Item data/Lists/Business Glossary 
+RGO SIMS SEMESTER CourseSemester Semester in which the module is offered and taken. Official Closed Non-sensitive x(2) ​Semester 1: S1
+Semester 2: S2
+Year 1: Y1
+Year 2: Y2 Half yearly Course Item data/Lists/Business Glossary 
+RGO SIMS COURSE_SHORT_NAME CourseShortName ​Short name of a course.  Official Open Non-sensitive Ad Hoc Course Item data/Lists/Business Glossary 
+RGO STUDENT_STUDY_PGMS ACAD_YR LearnerAcadYear Academic year in which the module is offered and taken. Official Closed Sensitive Normal n(4) Annual Learner Item data/Lists/Business Glossary 
+RGO SIMS_STUDENTS APPLN_TYPE LearnerApplicationType Type of admission exercies of learner​ Official Closed Sensitive Normal x(4) 'DAE': Direct Admission Exercise;
+'EAE': Early Admission Exercise;
+'EAE-I': Early Admission Exercise for ITE graduates;
+'JAE': Joint Admission Exercise;
+'JPAE': Joint Poly Admission Exercise;​
+'APPE': Appeal Annual Learner Use as aggregated data for statistical reporting​ Item data/Lists/Business Glossary 
+RGO SIMS_STUDENTS BIRTHYR LearnerBirthYear Year of birth of learner.​ Official Closed Sensitive Normal n(4) Annual Learner ​Use as aggregated data for statistical reporting Item data/Lists/Business Glossary 
+RGO SIMS_STUDENTS CITIZEN_CLUSTER LearnerCitizenCode Citizenship of learner​ Official Closed Sensitive Normal X(3) 'SC': Singapore Citizen;
+'SPR': Singapore Permanent Resident;
+'IS': Internation Student.​ Annual Learner Use as aggregated data for statistical reporting​ Item data/Lists/Business Glossary 
+RGO SIMS_STUDENTS COURSE_CODE LearnerCourseCode The course that the learner studies at NYP​ Official Open Non-sensitive X(6) Structure - SSCCNN:
+(i) SS are the school code (SBM/SCL/SDN/SEG/SHSS/SIDM/SIT);
+(ii) CC are the course type (DP/NP/NF/A/B/S/EP/V);
+(iii) NN is a two-digit assigned number​ Annual Learner ​Use as aggregated data for statistical reporting Item data/Lists/Business Glossary 
+RGO SIMS_STUDENTS ENTRYQUAL_CLUSTER LearnerEntryQualification Type of entry qualification of learner​ Official Closed Sensitive Normal 'GCOL': GCE O Level;
+'ITE': ITE;
+'OTHERS': others​ Annual Learner Use as aggregated data for statistical reporting​ Item data/Lists/Business Glossary 
+RGO SIMS_STUDENTS FAMILY_INCOME_RANGE LearnerFamilyIncomeRange Range of family income of learner​ Restricted Sensitive High ​'0599 or less'; '600-799'; '800-999';
+'1000-1499'; '1500-1999'; '2000-2499'; '2500-2999';
+'3000-3999'; '4000-4999'; '5000-5999'; '6000-6999';
+'7000 or more'  Annual Learner Use as aggregated data for statistical reporting​ Item data/Lists/Business Glossary 
+RGO SIMS_STUDENTS SEX LearnerGenderCode Gender of learner​ Official Closed Sensitive Normal x(1) 'M': Male;
+'F': Female Annual Learner ​Use as aggregated data for statistical reporting Item data/Lists/Business Glossary 
+RGO SIMS_STUDENTS HOUSING_TYPE LearnerHousingType Type of housing of learner​ Official Closed Sensitive Normal ​'HDB 2/3/4/5-ROOM/EXECUTIVE FLAT';
+'RENTED PLACE';
+'CONDOMINIUM / PRIVATE APARTMENT';
+'LANDED' Annual Learner Use as aggregated data for statistical reporting​ Item data/Lists/Business Glossary 
+RGO SIMS_STUDENTS ADM_NO LearnerIDNo The admission number is for unique identification of a learner in NYP.​ Official Closed Sensitive Normal x(7) Structure - YYNNNNC:
+(i) YY are the last two-digit of the year of admission;
+(ii) NNNN is a four-​digit assigned number;
+(iii) C is the check digit Annual Learner ​Use as aggregated data for statistical reporting Item data/Lists/Business Glossary 
+RGO STUDENT_STUDY_PGMS MODULE_CODE LearnerModuleCode Code of module taken Official Closed Sensitive Normal x(6) ​Structure - SSMNNN or SSNNNN:
+(i) SS are the school code;
+(ii) MNNN
+     For GSM modules: M = 'X' or 'S';
+     For Diploma Plus modules: M = 'A';
+     NNNN = assigned number;
+(iii) NNNN = assigned number of all other module types. Half yearly Learner Item data/Lists/Business Glossary 
+RGO SIMS_STUDENTS RACE_DESC LearnerRaceCode Race of learner​ Official Closed Sensitive Normal x(2) Annual Learner Use as aggregated data for statistical reporting​ Item data/Lists/Business Glossary 
+HR HRIS_STAFF DATE_OF_BIRTH StaffBirthDate The date of birth of a staff
+ Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff The MMDD could be represented by "0000" or 4 spaces if only the birth year is known.  ICA for SC/PR data; MOM for foreigners data. Item data/Lists/Business Glossary 
+HR HRIS_STAFF CITIZENSHIP_CONV_DATE StaffCitizenshipCertIssueDate Citizenship Conversion Date​ Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF ADD_INFO StaffAdditionalInfo Additional information of the staff​ Official Closed Sensitive Normal x(1000) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF BUILDING_NAME StaffAddressBuildingName Building name​ Official Closed Sensitive Normal x(50) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF COUNTRY StaffAddressCountryCode Country code​ Official Closed Sensitive Normal x(4) Refer to HRIS_Codes: Code_Type = '001' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '001' Item data/Lists/Business Glossary 
+HR HRIS_STAFF FLOOR_UNIT_NO StaffAddressFloorUnitNo Floor and unit number​ Official Closed Sensitive Normal x(15) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF BLK_HSE_NO StaffAddressHseNo Block number or house number.​ Official Closed Sensitive Normal x(15) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF POSTAL_CODE StaffAddressPostalCode Postal code​ Official Closed Sensitive Normal x(6) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF STREET_NAME StaffAddressStreetName Street name​ Official Closed Sensitive Normal x(120) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_APPT_HISTORY A_NA StaffANa A tag to identify the staff is an academic or non-academic staff:
+'A': Academic staff;
+'​NA': Non-academic staff Official Closed Sensitive Normal x(2) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_APPT_HISTORY APPOINTMENT_TERM StaffAppointmentTerm Appointment Term​.
+On contract or establishment Official Closed Sensitive Normal x(1) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF CONTRACT_EXPIRY StaffContractExpiry ​Contract Expiry Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF CONTRACT_LENGTH StaffContractLength All previous contract length; e.g. 2yr3yr1yr​ Official Closed Sensitive Normal x(50) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF PLACE_OF_BIRTH StaffCountryBirthCode ​The country of birth of a person Official Closed Sensitive Normal x(2) Refer to HRIS_Codes: Code_Type = '001' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '001' Item data/Lists/Business Glossary 
+HR HRIS_APPT_HISTORY DATE_JOINED StaffDateJoined Date staff joined NYP. Use to facilitate in calculation of service days.​ Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_APPT_HISTORY DEPT_ESTAB StaffDeptEstab ​Estab Department, where the headcount of staff is registered. Official Closed Sensitive Normal x(12) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_APPT_HISTORY DESIGNATION StaffDesignation Designation with concurrent appointment, if applicable.
+System default designation from HRIS_DESIGNATION table.  User can update.​ Official Closed Sensitive Normal x(300) Ad Hoc Staff ​​The list of 6 data elements below are considered "Official Open" when used in the context of providing NYP Contact Information:
+1. StaffPreferredName (PREFERRED_NAME);
+2. StaffSalutation (SALUTATION);
+3. StaffDesignation (DESIGNATION);
+4. StaffReportingDept (REPORTING_DEPT);
+5. StaffOfficeNo (OFFICE_NO);
+6. StaffOfficeEmail (INTERNET_ADDR).  Item data/Lists/Business Glossary 
+HR HRIS_STAFF PERSONAL_EMAIL StaffEmailAddress Last known email address.
+(Personal Email Address)​ Official Closed Sensitive Normal Refer to Email Address element type in Annex A Ad Hoc Staff Nil Item data/Lists/Business Glossary 
+HR HRIS_JOB_HISTORY END_DATE StaffEndDate EndDate of Employment in ​YYYY/MM Official Closed Sensitive Normal x(7) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF EPASS_CATEGORY StaffEPassCategory Employment pass category ​- P1, P2, Q1, Q2 Official Closed Sensitive Normal x(2) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF EPASS_EXPIRY_DATE StaffEPassExpiryDate ​Expiry date of employment pass Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF EPASS_ISSUE_DATE StaffEPassIssueDate Issue date of employment pass​ Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF EPASS_NO StaffEPassNo Employment pass number​ Official Closed Sensitive Normal x(10) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF EPASS_TYPE StaffEPassType Type - work permit or employment pass​ Official Closed Sensitive Normal x(2) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_APPT_HISTORY ESTAB_GROUP StaffEstabGroup Estab Grouping.  eg. D/M OFF etc. Used in printing staff strength report.  ​ Official Closed Sensitive Normal x(10) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF FATHER_NAME StaffFatherName Name of father of staff​ Official Closed Sensitive Normal x(60) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF FATHER_NATIONALITY StaffFatherNationality Nationality of father of staff​ Official Closed Sensitive Normal x(2) Refer to HRIS_Codes: Code_Type = '002' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '002' Item data/Lists/Business Glossary 
+HR HRIS_STAFF FIRST_NAME StaffFirstName First Name of staff.
+Used for mail merge, e.g. formal letters​ Official Closed Sensitive Normal x(60) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF SEX StaffGenderCode ​The gender of a person:
+'M': Male
+'F': Female
+(Sex) Official Closed Sensitive Normal x(1) Ad Hoc Staff Nil Item data/Lists/Business Glossary 
+HR HRIS_SERVICE_GRADE DIVISION StaffGradeDivision ​A code to denote staff joining NYP as division I, II, III or IV officer.
+1: Division I;
+2: Division II;
+3: Division III;
+4: Division IV;
+5: Superscale Official Closed Sensitive Normal x(1) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_QUALIFICATIONS HIGHEST_QUAL StaffHighestQual Highest Qualification (latest).  Indicator if this qualification is the highest for the adjunct teaching staff.
+'Y': Yes
+null.
+If need to find highest qualification as at a certain year, use year of award and ranking (from HRIS_CODES) to find the highest qualification. Official Closed Sensitive Normal x(1) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF STAFF_ID StaffID For new staff, CNC will create a record in NEW_STAFF table with EMP_NO and STAFF_ID.
+When HR upload staff records, the upload program will get STAFF_ID from NEW_STAFF table to update the new staff record. 
+Program will then delete the record from NEW_STAFF table.​ Official Closed Sensitive Normal x(10) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF EMP_NO StaffIDNo The ID Number is either UIN or FIN.
+For the Unique Identification Number (UIN), it is assigned to Singapore Citizens (SC), Permanent Residents (PR) and children born in Singapore.
+For the Foreign Identification Number (FIN), it is assigned to foreigners who apply to ICA for a long-term pass or MOM for a work pass.
+(Employee Number is either NRIC No. or FIN for foreigner).​ Official Closed Sensitive Normal x(9) Structure: ANNNNNNNC. (i) A is the century prefix - UIN: 'S' for 1900-1999 & 'T' for 2000 - 2099; FIN: 'F' for 1900 - 1999; 'G' for 2000 - 2099; (ii) NNNNNNN is a 7-digit assigned number; (iii) C is the check digit. Ad Hoc Staff To be mapped to ODIN number as NRIC is sensitive Item data/Lists/Business Glossary 
+HR HRIS_STAFF INDUCTION_DATE StaffInductionDate Date of staff induction​ Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF DATE_JOIN_WORKFORCE StaffJoinWorkforceDate Date first joined workforce​ Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF LANG_SPOKEN StaffLangSpoken Language spoken​ Official Closed Sensitive Normal x(60) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF LANG_WRITTEN StaffLangWritten Language written Official Closed Sensitive Normal x(60) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF LAST_NAME StaffLastName Last, or family, name of staff​ Official Closed Sensitive Normal x(40) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF MARITAL_STATUS StaffMaritalStatusCode A person's conjugal status in relation to marriage laws in Singapore.​ Restricted Sensitive Normal n(1) Refer to Marital Status Code in Annex C Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF DATE_OF_MARRIAGE StaffMarriageDate Latest marriage date of a person​ Restricted Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF MED_DATE StaffMedClearanceDate Medical Clearance Date​ Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF MED_CLEARANCE StaffMedClearanceStatus Indicator to denote Medical Clearance Status​ Official Closed Sensitive Normal x(10) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF MEDICAL_SCHEME StaffMedicalSchemeCode Medical Scheme of staff.
+Valid codes are:
+a. "CPW"
+b. "CCS"
+c. "MSO" Official Closed Sensitive Normal x(3) Ad Hoc Staff Check Constraint Item data/Lists/Business Glossary 
+HR HRIS_STAFF MOTHER_NAME StaffMotherName Name of mother of staff​ Official Closed Sensitive Normal x(60) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF MOTHER_NATIONALITY StaffMotherNationality ​Nationality of mother of staff Official Closed Sensitive Normal x(2) Refer to HRIS_Codes: Code_Type = '002' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '002' Item data/Lists/Business Glossary 
+HR HRIS_STAFF MOVEMENT_TAG StaffMovementTag Indicator to denote if staff is employed under Movement Policy.​ Official Closed Sensitive Normal x(1) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF NATIONALITY StaffNationalityCode The citizenship of a staff
+ Official Closed Sensitive Normal x(2) Refer to HRIS_Codes: Code_Type = '002' Ad Hoc Staff (HR) Refer to HRIS_Codes: Code_Type = '002' Item data/Lists/Business Glossary 
+HR HRIS_STAFF NS_CONDUCT StaffNSConduct Conduct in NS​ Official Closed Sensitive Normal x(6) Refer to HRIS_Codes: Code_Type = '041' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '041' Item data/Lists/Business Glossary 
+HR HRIS_STAFF NS_DISRUPTION_PERIOD StaffNSDisruptionPeriod ​NS disruption period Official Closed Sensitive Normal x(4) YYMM Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF NS_DISRUPTION_PERIOD StaffNSDisruptionYears Disruption from Nation Service (in years)​ Official Closed Sensitive Normal n(4) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF NS_DATE_ENLIST StaffNSEnlistDate Date of Enlistment for National Service​ Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF NS_PERF_RATING StaffNSPerfRating Performance rating in NS​ Official Closed Sensitive Normal x(6) Refer to HRIS_Codes: Code_Type = '041' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '041' Item data/Lists/Business Glossary 
+HR HRIS_STAFF NS_RANK StaffNSRank Rank in National Service​ Official Closed Sensitive Normal x(10) Refer to HRIS_Codes: Code_Type = '025' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '025' Item data/Lists/Business Glossary 
+HR HRIS_STAFF NS_DATE_RELEASE StaffNSReleaseDate Date of Release from National Service​ Official Closed Non-sensitive n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF NS_STATUS StaffNSStatus National Service Status
+- full time / part time / exempted​ Official Closed Sensitive Normal x(2) Refer to HRIS_Codes: Code_Type = '027' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '027' Item data/Lists/Business Glossary 
+HR HRIS_STAFF NS_UNIT StaffNSUnit Unit in National Service​ Official Closed Sensitive Normal x(60) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF NS_TOTAL_YRS StaffNSYearsServed Total Years of National Service served in YYMM format where:​
+YY: no. of years;
+MM: no. of months
+For old case where staff served 3 months in army and the rest in EDB, then NS_YEARS_SERVED would be 0003 and NS_TOTAL_YRS would be 0203. Official Closed Sensitive Normal n(4) YYMM Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF ODIN_NO StaffOdinNo Number used to uniquely identify the staff in ODIN.
+It will be a running sequence and will follow the staff even staff had converted from FIN to NRIC.​ Official Closed Sensitive Normal x(30) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR STAFF INTERNET_ADDR StaffOfficeEmail Office email address
+ Official Closed Sensitive Normal x(50) Ad Hoc Staff ​​The list of 6 data elements below are considered "Official Open" when used in the context of providing NYP Contact Information:
+1. StaffPreferredName (PREFERRED_NAME);
+2. StaffSalutation (SALUTATION);
+3. StaffDesignation (DESIGNATION);
+4. StaffReportingDept (REPORTING_DEPT);
+5. StaffOfficeNo (OFFICE_NO);
+6. StaffOfficeEmail (INTERNET_ADDR).  Item data/Lists/Business Glossary 
+HR HRIS_STAFF OFFICE_NO StaffOfficeNo Office telephone number​ Official Closed Sensitive Normal x(30) Ad Hoc Staff ​​The list of 6 data elements below are considered "Official Open" when used in the context of providing NYP Contact Information:
+1. StaffPreferredName (PREFERRED_NAME);
+2. StaffSalutation (SALUTATION);
+3. StaffDesignation (DESIGNATION);
+4. StaffReportingDept (REPORTING_DEPT);
+5. StaffOfficeNo (OFFICE_NO);
+6. StaffOfficeEmail (INTERNET_ADDR).  Item data/Lists/Business Glossary 
+HR HRIS_STAFF OVERSEAS_ADDR StaffOverseasAddr Overseas address of staff​ Official Closed Sensitive Normal x(120) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF OVERSEAS_CTRY StaffOverseasCountryCode Country code of the overseas address of staff​ Official Closed Sensitive Normal x(4) Refer to HRIS_Codes: Code_Type = '001' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '001' Item data/Lists/Business Glossary 
+HR HRIS_STAFF OVERSEAS_FAX StaffOverseasFaxNo Overseas fax number of staff​ Official Closed Sensitive Normal x(30) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF OVERSEAS_HP StaffOverseasHPNo Overseas handphone number of staff​ Official Closed Sensitive Normal x(30) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF OVERSEAS_POSTAL StaffOverseasPostalCode Postal code of the overseas address of staff​ Official Closed Sensitive Normal x(6) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF OVERSEAS_STATE StaffOverseasState State in the overseas address of staff Official Closed Sensitive Normal x(50) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF StaffPhoto Photo of staff​ Official Closed Sensitive Normal x(1) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF PREFERRED_NAME StaffPreferredName Preferred Name of staff.
+Commonly used, e.g. email, staff directory, etc​ Official Closed Sensitive Normal x(40) Ad Hoc Staff ​The list of 6 data elements below are considered "Official Open" when used in the context of providing NYP Contact Information:
+1. StaffPreferredName (PREFERRED_NAME);
+2. StaffSalutation (SALUTATION);
+3. StaffDesignation (DESIGNATION);
+4. StaffReportingDept (REPORTING_DEPT);
+5. StaffOfficeNo (OFFICE_NO);
+6. StaffOfficeEmail (INTERNET_ADDR).  Item data/Lists/Business Glossary 
+HR HRIS_STAFF DATE_GRANTED_PR StaffPRGrantedDate Date staff is granted PR status​ Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF STAFF_NAME StaffPrincipalName Name of a UIN or FIN holder​ Official Closed Sensitive Normal x(66) Nil Ad Hoc Staff The guideline in printing a person name (also used in NRIC) is: "Principal followed by Hanyu Pinyin, Alias and Hanyu Pinyin Alias and lastly, married".  They are separated by rows.  Each type starts in a new row.  ICA: SC/PR; MOM: foreigners. Item data/Lists/Business Glossary 
+HR HRIS_STAFF PR_STATUS StaffPRStatusCode The residential status of a person in Singapore.
+A tag to indicate whether staff is a PR:
+'Y' - Yes;
+'N' - No​ Official Closed Sensitive Normal x(1) Refer to PR/Residential Status Code in Annex C Ad Hoc Staff Nil Item data/Lists/Business Glossary 
+HR HRIS_STAFF PTCS_STAFF_TYPE StaffPTCSType 'Staff Type' used in the Part-Time Claim System (PTCS):
+a. "EXT": External Speaker;
+b. "TEMP": Temporary Staff;
+c. "STUD": NYP Student;
+d. "OTH": Others Official Closed Sensitive Normal x(4) Ad Hoc Staff Check Constraint; Not Null Item data/Lists/Business Glossary 
+HR HRIS_STAFF PT_STAFF StaffPTScheme Indicator to denote staff working as part-time scheme​ Official Closed Sensitive Normal x(1) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF RACE StaffRaceCode The Race of a person​ Official Closed Sensitive Normal x(2) Refer to HRIS_Codes: Code_Type = '004' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '004' Item data/Lists/Business Glossary 
+HR HRIS_STAFF RELIGION StaffReligionCode The religion of a person​ Official Closed Sensitive Normal x(1) Refer to HRIS_Codes: Code_Type = '005' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '005' Item data/Lists/Business Glossary 
+HR HRIS_APPT_HISTORY REPORTING_DEPT StaffReportingDept Reporting Department​. This is usually the same as StaffDeptEstab.
+For staff who are on attachment to the 'Reporting Department', the 'StaffReportingDept' and 'StaffDeptEstab' would be different during the attachment period, Official Closed Sensitive Normal x(12) Ad Hoc Staff ​The list of 6 data elements below are considered "Official Open" when used in the context of providing NYP Contact Information:
+1. StaffPreferredName (PREFERRED_NAME);
+2. StaffSalutation (SALUTATION);
+3. StaffDesignation (DESIGNATION);
+4. StaffReportingDept (REPORTING_DEPT);
+5. StaffOfficeNo (OFFICE_NO);
+6. StaffOfficeEmail (INTERNET_ADDR).  Item data/Lists/Business Glossary 
+HR HRIS_STAFF RS_RANK StaffReservistRank Rank in reservist​ Official Closed Sensitive Normal X(10) Refer to HRIS_Codes: Code_Type = '025' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '025' Item data/Lists/Business Glossary 
+HR HRIS_STAFF RS_SERVICE_TYPE StaffReservistServiceType Reservist service type; e.g. army, navy, air force, SCDF, police.​ Official Closed Sensitive Normal x(4) Refer to HRIS_Codes: Code_Type = '024' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '024' Item data/Lists/Business Glossary 
+HR HRIS_STAFF RS_STATUS StaffReservistStatus Reservist Status​ Official Closed Sensitive Normal x(2) Refer to HRIS_Codes: Code_Type = '026' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '026' Item data/Lists/Business Glossary 
+HR HRIS_STAFF RS_UNIT StaffReservistUnit Unit in reservist​ service Official Closed Sensitive Normal x(60) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF RS_VOCATION StaffReservistVocation Vocation in reservist service​ Official Closed Sensitive Normal x(60) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF SALUTATION StaffSalutation Salutation of Staff​ Official Closed Sensitive Normal x(4) Refer to HRIS_Codes: Code_Type = '006' Ad Hoc Staff ​The list of 6 data elements below are considered "Official Open" when used in the context of providing NYP Contact Information:
+1. StaffPreferredName (PREFERRED_NAME);
+2. StaffSalutation (SALUTATION);
+3. StaffDesignation (DESIGNATION);
+4. StaffReportingDept (REPORTING_DEPT);
+5. StaffOfficeNo (OFFICE_NO);
+6. StaffOfficeEmail (INTERNET_ADDR).  Item data/Lists/Business Glossary 
+HR HRIS_STAFF SC_CATEGORY StaffSecurityClearanceCategory Category of Security Clearance​ Official Closed Sensitive Normal x(10) Refer to HRIS_Codes: Code_Type = '059' Ad Hoc Staff Refer to HRIS_Codes: Code_Type = '059' Item data/Lists/Business Glossary 
+HR HRIS_STAFF SC_DATE StaffSecurityClearanceDate Date of security clearance​ Official Closed Sensitive Normal n(8) YYYYMMDD Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_APPT_HISTORY SERVICE_GRADE StaffServiceGrade Service Grade of the Staff​, (IPS grades) Official Closed Sensitive Normal x(10) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_APPT_HISTORY STAFF_STATUS StaffStatus Staff Status​ Official Closed Sensitive Normal x(2) Ad Hoc Staff Item data/Lists/Business Glossary 
+HR HRIS_STAFF HOME_NO StaffTelephoneNo Last known telephone number.
+(Home Telephone Number)​ Official Closed Sensitive Normal Refer to Telephone element type in Annex A Ad Hoc Staff Nil Item data/Lists/Business Glossary 
+HR HRIS_STAFF YRS_NOT_IN_SRV StaffYrsNotInSrv Total years staff is not working​. Official Closed Sensitive Normal n(4,2) Ad Hoc Staff Item data/Lists/Business Glossary 
+S/N Code Owner Adopted Standards Dependent Data Elements Usage Guidelines Number of Rows Range Item Type Path 
+1 CountryCode MHA MHA Internal PersonCountryBirthCode; StaffAddressCountryCode;  StaffOverseasCountryCode 332 AA to ZW Item data/Lists/NYP Code Tables 
+2 NationalityCode MHA MHA Internal PersonNationalityCode;  StaffFatherNationality;  StaffMotherNationality 221 AD to ZW Item data/Lists/NYP Code Tables 
+3 MaritalStatusCode DHR HRIS_Codes, Code_Type: 3  Description: Marital Status 6 D, M, O, Se, Si, W Item data/Lists/NYP Code Tables 
+4 RaceCode DHR HRIS_Codes, Code_Type: 4  Description: Race 5 CEIMO Item data/Lists/NYP Code Tables 
+5 ReligionCode DHR HRIS_Codes, Code_Type: 5  Description: Religion 8 BCFGMOST Item data/Lists/NYP Code Tables 
+6 SalutationCode DHR HRIS_Codes, Code_Type: 6  Description: Salutation 6 DrMdmMr MrsMsProf Item data/Lists/NYP Code Tables 
+7 QualificationCode DHR HRIS_Codes, Code_Type: 7  Description: Qualification 18 1 to 17, 99 Item data/Lists/NYP Code Tables 
+8 HonoursCode DHR HRIS_Codes, Code_Type: 8  Description: Honours 9 1CH...  Honours Item data/Lists/NYP Code Tables 
+9 GeneralDegreeAwardCode DHR HRIS_Codes, Code_Type: 9  Description: General Degree 5 C, D, HD, HM, M Item data/Lists/NYP Code Tables 
+10 FieldOfStudyCode DHR HRIS_Codes, Code_Type: 10  Description: Field of Study 15 1 to 15 Item data/Lists/NYP Code Tables 
+11 ScholarshipCode DHR HRIS_Codes, Code_Type: 11  Description: Scholarship 9 COL to PSC Item data/Lists/NYP Code Tables 
+12 GCEOSubjectCode DHR HRIS_Codes, Code_Type: 12  Description: GCE 'O' Subjects 111 G00 to G99  GA1 to H96 Item data/Lists/NYP Code Tables 
+13 GCEASubjectCode DHR HRIS_Codes, Code_Type: 13  Description: GCE 'A' Subjects 94 A00 to A99  AA1 to UML Item data/Lists/NYP Code Tables 
+14 ReasonforLeavingCode DHR HRIS_Codes, Code_Type: 14  Description: Reason for Leaving 16 IndExp to Termination Item data/Lists/NYP Code Tables 
+15 RelationshipCode DHR HRIS_Codes, Code_Type: 15  Description: Relationship 22 Aunt to Uncle Item data/Lists/NYP Code Tables 
+16 LoanTypeCode DHR HRIS_Codes, Code_Type: 16  Description: Type of Loan 6 CL, HL, PL, RL, TS, VL Item data/Lists/NYP Code Tables 
+17 StaffCategoryCode DHR HRIS_Codes, Code_Type: 17  Description: Staff Category 7 Academic to TSO Item data/Lists/NYP Code Tables 
+18 ServiceGradeScaleOptionCode DHR HRIS_Codes, Code_Type: 18  Description: Service Grade Scale Option 4 L2A, MOD, L2A(CPW), CPW Item data/Lists/NYP Code Tables 
+19 EstabGroupingCode DHR HRIS_Codes, Code_Type: 19  Description: Estab Grouping 15 A to TSO Item data/Lists/NYP Code Tables 
+20 MovementTypeCode DHR HRIS_Codes, Code_Type: 20  Description: Movement Type 44 APP to TRFEXT Item data/Lists/NYP Code Tables 
+21 SpecialProjectGroupCode DHR HRIS_Codes, Code_Type: 21  Description: Special Project Group 9 BIG to SIT Item data/Lists/NYP Code Tables 
+22 StaffGroupingCode DHR HRIS_Codes, Code_Type: 22  Description: Staff Grouping 29 EXE1 to TEACH2 Item data/Lists/NYP Code Tables 
+23 ProvisionClaimTypeCode DHR HRIS_Codes, Code_Type: 23  Description: Type of Provision Claim 2 Air Passage Shipment of Personal ... Item data/Lists/NYP Code Tables 
+24 ReservistServiceTypeCode DHR HRIS_Codes, Code_Type: 24  Description: Reservist Service Type 5 AIR, ARMY, NAVY, SCDF, SPF Item data/Lists/NYP Code Tables 
+25 ArmyRankCode DHR HRIS_Codes, Code_Type: 25  Description: Army Rank 42 1SG to WO Item data/Lists/NYP Code Tables 
+26 ReservistStatusCode DHR HRIS_Codes, Code_Type: 26  Description: Reservist Status 5 A, C, E, H, NA Item data/Lists/NYP Code Tables 
+27 NSStatusCode DHR HRIS_Codes, Code_Type: 27  Description: NS Status 5 EX, FT, NA, PT, RG Item data/Lists/NYP Code Tables 
+28 SalaryIncrementReasonCode DHR HRIS_Codes, Code_Type: 28  Description: Reason for Salary Increment 26 DI to SS2017 Item data/Lists/NYP Code Tables 
+29 JobCategoryCode DHR HRIS_Codes, Code_Type: 29  Description: Job Category 73 AL01 to TSS8 Item data/Lists/NYP Code Tables 
+30 PartTimeSchemeReasonCode DHR HRIS_Codes, Code_Type: 30  Description: Part Time Scheme Reason 9 1 to 9 Item data/Lists/NYP Code Tables 
+31 SpecialisationCode DHR HRIS_Codes, Code_Type: 31  Description: Specialisation 545 Computer to  Server Mgmt Item data/Lists/NYP Code Tables 
+32 NYPISUploadControlParameterCode DHR HRIS_Codes, Code_Type: 32  Description: Control Parameter for NYPIS Upload 4 PRINTERID to UPLDPATH Item data/Lists/NYP Code Tables 
+33 OccupationCode DHR HRIS_Codes, Code_Type: 33  Description: Occupation Code 37 A01 (Lect) to  T03 - LabTech Item data/Lists/NYP Code Tables 
+34 StaffPhotoControlParameterCode DHR HRIS_Codes, Code_Type: 34  Description: Control Parameter for Staff Photo 2 PHOTODIR to  PHOTOEXT Item data/Lists/NYP Code Tables 
+35 NotifyEventsAdvancePeriodCode DHR HRIS_Codes, Code_Type: 35 Description: Advance Period for Notify Events 12 ACONTRACT  to TENANCY Item data/Lists/NYP Code Tables 
+36 NotifyEventsTypeCode DHR HRIS_Codes, Code_Type: 36  Description: Type of Notify Events 23 ACONTRACT   to VERIFYNAT Item data/Lists/NYP Code Tables 
+37 RetirementAgeControlParameterCode DHR HRIS_Codes, Code_Type: 37  Description: Control Parameter for Retirement Age 2 COMRETIRE  DUERETIRE Item data/Lists/NYP Code Tables 
+38 EligibilityCode DHR HRIS_Codes, Code_Type: 38  Description: Eligibility 36 E to NE-TR Item data/Lists/NYP Code Tables 
+39 NonEligibilityCode DHR HRIS_Codes, Code_Type: 39  Description: Non-Eligibility 13 BAR to TS-MAX-APP Item data/Lists/NYP Code Tables 
+40 BonusTypeCode DHR HRIS_Codes, Code_Type: 40  Description: Type of Bonus 2 B to SB Item data/Lists/NYP Code Tables 
+41 PerformanceRatingCode DHR HRIS_Codes, Code_Type: 41  Description: Performing Rating 6 1 to 6 Item data/Lists/NYP Code Tables 
+42 ReportCategoryCode DHR HRIS_Codes, Code_Type: 42  Description: Report Category 6 CPTC, FN, S,T, FN, HR, SEC, Item data/Lists/NYP Code Tables 
+43 CurrencyCode DHR HRIS_Codes, Code_Type: 43  Description: CURRENCY 27 A$ to YEN Item data/Lists/NYP Code Tables 
+44 DivisionCode DHR HRIS_Codes, Code_Type: 44  Description: Division 5 Div I to Superscale Item data/Lists/NYP Code Tables 
+45 SchemeServiceCode DHR HRIS_Codes, Code_Type: 45  Description: Scheme of Service 21 DE to TSS Item data/Lists/NYP Code Tables 
+46 PerformanceBonusSubCategoryCode DHR HRIS_Codes, Code_Type: 46  Description: PB Sub-Category 9 1 to 5; 3a to 3d Item data/Lists/NYP Code Tables 
+47 DesignationCategoryCode DHR HRIS_Codes, Code_Type: 47  Description: Designation Category 251 Animator to Customer Relations Exe Item data/Lists/NYP Code Tables 
+48 WorkTypeCode DHR HRIS_Codes, Code_Type: 48  Description: Work Type 3 T, V, W Item data/Lists/NYP Code Tables 
+49 AppointmentTypeCode DHR HRIS_Codes, Code_Type: 49  Description: Appointment Type 133 1 to 133 Item data/Lists/NYP Code Tables 
+50 MarritalStatusCode DHR HRIS_Codes, Code_Type: 50  Description: Marital Status 6 S, M, Se, D, W,O Item data/Lists/NYP Code Tables 
+51 PartTimeStaffDesignationCode DHR HRIS_Codes, Code_Type: 51  Description: Part-Time Staff Designation 14 231 (PT Lect) to 244 (Adj Cul Trainer) Item data/Lists/NYP Code Tables 
+52 ServiceAwardYearCode DHR HRIS_Codes, Code_Type: 52  Description: Years of Service Award 5 5Y to 25Y Item data/Lists/NYP Code Tables 
+53 AgeGroupCode DHR HRIS_Codes, Code_Type: 53  Description: Age Group 16 <25, >65,25-34<;21,>60,21-25 Item data/Lists/NYP Code Tables 
+54 PerformanceBonusGradingCode DHR HRIS_Codes, Code_Type: 54  Description: PB Grading 9 A to E Item data/Lists/NYP Code Tables 
+55 MailMergeControlParameterCode DHR HRIS_Codes, Code_Type: 55  Description: Control Parameter for Mail Merge 3 LTR_CON, LTR_ESTAB, LTR_PT_CON Item data/Lists/NYP Code Tables 
+56 PublicOfficerGroupInsuranceCode DHR HRIS_Codes, Code_Type: 56  Description: Public Officer Group Insurance 6 B, BCI, BP, BPCI, CI, TL Item data/Lists/NYP Code Tables 
+57 AI2008PerfgradingCode DHR HRIS_Codes, Code_Type: 57  Description: Performance Grading for AI2008 6 A to E Item data/Lists/NYP Code Tables 
+58 CPLDCertTLCourseCtrlParamsCode DHR HRIS_Codes, Code_Type: 58  Description: Control Parameter fo CPLD CertTL course 3 1 to 3 Item data/Lists/NYP Code Tables 
+59 SecurityClearanceCode DHR HRIS_Codes, Code_Type: 59  Description: Security Clearance 5 CAT1 to CAT3 Item data/Lists/NYP Code Tables 
+60 NYPCommitteeCode DHR HRIS_Codes, Code_Type: 60  Description: Committee (NYP) 42 C&S  AC to WSH Item data/Lists/NYP Code Tables 
+61 ContractDeclineReasonCode DHR HRIS_Codes, Code_Type: 61  Description: Reason for Contract Decline 5 Family to Unable to Commit time Item data/Lists/NYP Code Tables 
+62 EpassTypeCode DHR HRIS_Codes, Code_Type: 62  Description: Epass Type 4 DP, EP, LOC, WP Item data/Lists/NYP Code Tables 
+63 CourseStructureCode DHR HRIS_Codes, Code_Type: 63  Description: Course Structure 2 1: On Campus 2: Off Campus Item data/Lists/NYP Code Tables 
+64 ALTPStatusCode DHR HRIS_Codes, Code_Type: 64  Description: ALTP Status 6 1 to 6 Item data/Lists/NYP Code Tables 
+65 ODINSequenceRunningNumber DHR HRIS_Codes, Code_Type: 65  Description: ODIN Sequence ODIN Sequence no. Item data/Lists/NYP Code Tables 
+66 IRIEBandingCode DHR HRIS_Codes, Code_Type: 66  Description: IRIE Banding 4 A to D Item data/Lists/NYP Code Tables 
+67 ReimbursementPaybackExitModeReasonCode DHR HRIS_Codes, Code_Type: 67  Description: Reason for Exit Mode in Reimbursement/Payback 5 CL, REMCL, RES, RET, TERM Item data/Lists/NYP Code Tables 
+68 ParentCareLeaveReasonCode DHR HRIS_Codes, Code_Type: 68  Description: Parent Care Leave Reasons 3 1 to 3 Item data/Lists/NYP Code Tables 
+69 DHR HRIS_Codes, Code_Type: 69 Item data/Lists/NYP Code Tables 
+70 DHR HRIS_Codes, Code_Type: 70 Item data/Lists/NYP Code Tables 
+71 MedicalClinicsExclusionCode DHR HRIS_Codes, Code_Type: 71  Description: Medical Clinics Exclusions 4 1, 2, 4, 5 Item data/Lists/NYP Code Tables 
+72 ExitAreaCode DHR Effective 19Mar2013 8 1 to 8 Item data/Lists/NYP Code Tables 
+73 ExitRatingCode DHR Effective 13Mar2013 4 1 to 4 Item data/Lists/NYP Code Tables 
+74 ExitReasonCode DHR Effective 13Mar2013 6 1 to 6 Item data/Lists/NYP Code Tables 
+75 PR/ResidentialStatusCode DHR MHA Internal Code PersonPRStatusCode 5 A, C, P, U, N Item data/Lists/NYP Code Tables 
+

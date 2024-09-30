@@ -1,4 +1,3 @@
-
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
 import openai
@@ -17,8 +16,6 @@ DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 llm = ChatOpenAI(temperature=0.7, model="gpt-4o-mini")
-
-
 
 # change the retriever params
 embedding = OpenAIEmbeddings()
@@ -50,7 +47,9 @@ qa = RetrievalQA.from_chain_type(
     chain_type_kwargs={"prompt": PROMPT},
 )
 
-question = "what are the different sensitivity labels?" # Enter your question here
+
+print("Enter your question here:")
+question = input()
 response = qa.invoke({"query": question})
 result = response["result"]
 print(result)

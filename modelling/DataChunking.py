@@ -15,16 +15,6 @@ load_dotenv()
 CHROMA_PATH = os.getenv("CHROMA_PATH")
 DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
-embedding_model = os.getenv("EMBEDDING_MODEL")
-
-
-# def get_embedding_model(model_name):
-#     if model_name == "OpenAIEmbeddings":
-#         return OpenAIEmbeddings()  # Ensure this returns an instance
-#     # You can add other embedding models here
-#     else:
-#         raise ValueError(f"Unknown embedding model: {model_name}")
-
 
 def main():
     documents = load_text(DATA_PATH)
