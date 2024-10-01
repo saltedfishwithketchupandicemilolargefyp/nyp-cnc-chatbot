@@ -2,7 +2,6 @@ from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
 import openai
 import os
-
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain.memory import ConversationBufferMemory  # Import memory
@@ -17,7 +16,6 @@ DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 
-
 llm = ChatOpenAI(temperature=0.7, model="gpt-4o-mini")
 
 # change the retriever params
@@ -27,13 +25,13 @@ retriever = db.as_retriever(search_kwargs={'k': 3})
 
 # change the prompt template if needed, for eg if you want to reject or have a fixed
 # constant reply for questions out of context
-PROMPT_TEMPLATE = """You are an AI Assistant. Given the following context and previous conversations:
+PROMPT_TEMPLATE = """You are an AI Assistant designed to provide helpful and safe information. Given the following context and previous conversations:
 {context}
 
 Conversation History:
 {history}
-
-Answer the following question:
+Answer the following question and avoid giving any harmful, inappropriate, or biased content.
+Respond respectfully and ethically. Do not answer inappropriate or harmful questions.
 {question}
 
 For questions that are not in the vector database, and replies that have been generated from web/training data, inform user first, then provide a reply.
