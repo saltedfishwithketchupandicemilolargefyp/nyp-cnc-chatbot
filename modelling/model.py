@@ -15,11 +15,13 @@ load_dotenv()
 CHROMA_PATH = os.getenv("CHROMA_PATH")
 DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
+
 
 llm = ChatOpenAI(temperature=0.7, model="gpt-4o-mini")
 
 # change the retriever params
-embedding = OpenAIEmbeddings()
+embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL)
 db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding)
 retriever = db.as_retriever(search_kwargs={'k': 3})
 

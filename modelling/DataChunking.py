@@ -15,6 +15,7 @@ load_dotenv()
 CHROMA_PATH = os.getenv("CHROMA_PATH")
 DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 
 def main():
     documents = load_text(DATA_PATH)
@@ -50,14 +51,11 @@ def split_list(chunks, batch_size):
 def create_db(split_chunks):
     if os.path.exists(CHROMA_PATH):
         shutil.rmtree(CHROMA_PATH)
-
-    # Create a new DB from the documents with the specified embedding function
-    # embeddings = get_embedding_model(embedding_model)  # Retrieve the embedding model
     
     for chunk in split_chunks:
         db = Chroma.from_documents(
             documents=chunk,
-            embedding=OpenAIEmbeddings(),
+            embedding=OpenAIEmbeddings(model=EMBEDDING_MODEL),
             persist_directory=CHROMA_PATH,
         )
 
