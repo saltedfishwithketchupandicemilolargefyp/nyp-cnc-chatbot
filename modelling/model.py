@@ -1,3 +1,5 @@
+#MODEL WITH NO CONVO HISTORY
+
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
 import openai
@@ -28,8 +30,6 @@ retriever = db.as_retriever(search_kwargs={'k': 3})
 PROMPT_TEMPLATE = """You are an AI Assistant designed to provide helpful and safe information. Given the following context and previous conversations:
 {context}
 
-Conversation History:
-{history}
 Answer the following question and avoid giving any harmful, inappropriate, or biased content.
 Respond respectfully and ethically. Do not answer inappropriate or harmful questions.
 {question}
@@ -39,11 +39,11 @@ For questions that are not in the vector database, and replies that have been ge
 Assistant:"""
 
 PROMPT = PromptTemplate(
-    template=PROMPT_TEMPLATE, input_variables=["context", "history", "question"]
+    template=PROMPT_TEMPLATE, input_variables=["context", "question"]
 )
 
 # Initialize conversation memory
-memory = ConversationBufferMemory(memory_key="history", return_messages=True)
+# memory = ConversationBufferMemory(memory_key="history", return_messages=True)
 
 # Create the RetrievalQA chain with memory
 qa = RetrievalQA.from_chain_type(
@@ -53,7 +53,7 @@ qa = RetrievalQA.from_chain_type(
     verbose=False,
     return_source_documents=True,
     chain_type_kwargs={"prompt": PROMPT},
-    memory=memory  # Add the memory module here
+    # memory=memory  # Add the memory module here
 )
 
 # Main interaction loop
@@ -65,3 +65,4 @@ while True:
     response = qa.invoke({"query": question})
     result = response["result"]
     print(result)
+    print('='*155)
