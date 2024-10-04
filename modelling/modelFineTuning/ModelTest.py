@@ -1,4 +1,4 @@
-# MODEL WITH CONVO HISTORY
+import yaml
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
 import openai
@@ -22,16 +22,17 @@ DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 
-# setting the LLM 
-llm = ChatOpenAI(temperature=0.7, model="gpt-4o-mini")
+# Load models configuration from config.yaml
+with open("config.yaml", "r") as config_file:
+    config_data = yaml.safe_load(config_file)
 
-# change the retriever params (between 3 to 5)
+# Setup retriever
 embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL)
 db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding)
 retriever = db.as_retriever(search_kwargs={'k': 3})
 
 
-# prompt to get the chat history context for followup questions
+# Define prompts
 contextualize_q_system_prompt = (
     "Given a chat history and the latest user question "
     "which might reference context in the chat history, "
@@ -40,7 +41,7 @@ contextualize_q_system_prompt = (
     "just reformulate it if needed and otherwise return it as is."
 )
 
-# setting the prompt template for history context
+# History context prompt template
 contextualize_q_prompt = ChatPromptTemplate.from_messages(
     [
         ("system", contextualize_q_system_prompt),
@@ -49,11 +50,7 @@ contextualize_q_prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-history_aware_retriever = create_history_aware_retriever(
-    llm, retriever, contextualize_q_prompt
-)
-
-# prompt for question answering
+# Question answering system prompt
 system_prompt = (
     "You are an assistant for question-answering tasks. "
     "Use the following pieces of retrieved context to answer the questions."
@@ -66,7 +63,7 @@ system_prompt = (
     "{context}"
 )
 
-# creating the prompt template for question answering
+# QA prompt template
 qa_prompt = ChatPromptTemplate.from_messages(
     [
         ("system", system_prompt),
@@ -75,58 +72,62 @@ qa_prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-question_answer_chain = create_stuff_documents_chain(llm, qa_prompt)
+# Loop through each model in config.yaml
+for model in config_data['models']:
+    # Create the LLM for this iteration
+    llm = ChatOpenAI(temperature=model['temperature'], model=model['name'])
 
-rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chain)
+    history_aware_retriever = create_history_aware_retriever(
+        llm, retriever, contextualize_q_prompt
+    )
 
-### Statefully manage chat history ###
+    question_answer_chain = create_stuff_documents_chain(llm, qa_prompt)
 
-# We define a dict representing the state of the application.
-# This state has the same input and output keys as `rag_chain`.
-class State(TypedDict):
-    input: str
-    chat_history: Annotated[Sequence[BaseMessage], add_messages]
-    context: str
-    answer: str
+    rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chain)
 
-
-# We then define a simple node that runs the `rag_chain`.
-# The `return` values of the node update the graph state, so here we just
-# update the chat history with the input message and response.
-def call_model(state: State):
-    response = rag_chain.invoke(state)
-    return {
-        "chat_history": [
-            HumanMessage(state["input"]),
-            AIMessage(response["answer"]),
-        ],
-        "context": response["context"],
-        "answer": response["answer"],
-    }
+    class State(TypedDict):
+        input: str
+        chat_history: Annotated[Sequence[BaseMessage], add_messages]
+        context: str
+        answer: str
 
 
-# Our graph consists only of one node:
-workflow = StateGraph(state_schema=State)
-workflow.add_edge(START, "model")
-workflow.add_node("model", call_model)
+    # We then define a simple node that runs the `rag_chain`.
+    # The `return` values of the node update the graph state, so here we just
+    # update the chat history with the input message and response.
+    def call_model(state: State):
+        response = rag_chain.invoke(state)
+        return {
+            "chat_history": [
+                HumanMessage(state["input"]),
+                AIMessage(response["answer"]),
+            ],
+            "context": response["context"],
+            "answer": response["answer"],
+        }
 
-# Finally, we compile the graph with a checkpointer object.
-# This persists the state, in this case in memory.
-memory = MemorySaver()
-app = workflow.compile(checkpointer=memory)
 
-config = {"configurable": {"thread_id": "abc123"}}
+    # Our graph consists only of one node:
+    workflow = StateGraph(state_schema=State)
+    workflow.add_edge(START, "model")
+    workflow.add_node("model", call_model)
+
+    # Finally, we compile the graph with a checkpointer object.
+    # This persists the state, in this case in memory.
+    memory = MemorySaver()
+    app = workflow.compile(checkpointer=memory)
+
+    config = {"configurable": {"thread_id": "abc123"}}
 
 
-# Main interaction loop
-print("Enter your question here ('Exit' to end):")
-while True:
-    question = input()
-    if question.lower() == "exit":
-        break
-    response = app.invoke({"input":question},config=config)
-    
-    # result = response["result"]
-    print(response['answer'])
-    print()
+    # Main interaction loop
     print("Enter your question here ('Exit' to end):")
+    while True:
+        question = input()
+        if question.lower() == "exit":
+            break
+        
+        response = app.invoke({"input":question},config=config)
+
+        # result = response["result"]
+        print(response['answer'])
