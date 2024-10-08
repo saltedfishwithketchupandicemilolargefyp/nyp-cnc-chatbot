@@ -20,6 +20,13 @@ load_dotenv()
 CHROMA_PATH = os.getenv("CHROMA_PATH")
 DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
+ai = os.getenv("OPENAI_API_KEY")
+print(CHROMA_PATH)
+print(DATA_PATH)
+print(ai)
+if not openai.api_key:
+    raise ValueError("OpenAI API key is missing. Please check your .env file.")
+
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 
 # setting the LLM 

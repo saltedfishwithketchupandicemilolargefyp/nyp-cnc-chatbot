@@ -38,11 +38,19 @@ def get_pptx_text(pptx_docs):
         
         # Loop through each slide in the presentation
         for slide in presentation.slides:
-
+            
             # Extract text from shapes (text boxes, titles, etc.)
             for shape in slide.shapes:
                 if hasattr(shape, "text"):
                     text += shape.text + "\n"
+                
+                # Check if the shape is a table
+                if shape.has_table:
+                    table = shape.table
+                    for row in table.rows:
+                        for cell in row.cells:
+                            text += cell.text + "\t"  # Add a tab space between table columns
+                        text += "\n"  # New line after each row
             
             # Extract text from speaker notes (if any)
             if slide.has_notes_slide:
