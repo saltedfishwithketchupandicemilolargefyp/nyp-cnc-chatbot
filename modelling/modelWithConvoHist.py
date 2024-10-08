@@ -60,7 +60,7 @@ system_prompt = (
     "Answer the following question and avoid giving any harmful, inappropriate, or biased content."
     "Respond respectfully and ethically. Do not answer inappropriate or harmful questions."
     "If the answer does not exist in the vector database,"
-    "Nicely inform the user that you are unable to answer questions that are not in the NYP CNC database."
+    "Nicely inform the user that you cannot answer questions that are not in the NYP CNC database."
     "Keep the answer concise."
     "\n\n"
     "{context}"
