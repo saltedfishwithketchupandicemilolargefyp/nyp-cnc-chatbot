@@ -1,4 +1,4 @@
-import yaml
+# MODEL WITH CONVO HIST AND MULTI QUERY CAPABILITY
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
 import openai
@@ -13,6 +13,9 @@ from langchain.chains import create_history_aware_retriever, create_retrieval_ch
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from dotenv import load_dotenv
 from typing import Sequence
+from langchain.retrievers.multi_query import MultiQueryRetriever
+from langchain.prompts import PromptTemplate
+import yaml
 
 # Load environment variables from .env file
 load_dotenv()
@@ -31,8 +34,20 @@ embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL)
 db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding)
 retriever = db.as_retriever(search_kwargs={'k': 3})
 
+# Define the multi-query generation template for retriever
+multi_query_template = PromptTemplate(
+    template=(
+        "The user has asked a complex question or multiple related questions: {question}.\n"
+        "1. First, split the query into distinct questions if there are multiple.\n"
+        "2. Then, for each distinct question, generate 3 rephrasings that would return "
+        "similar but slightly different relevant results.\n"
+        "Return each question on a new line with its rephrasings.\n"
+    ),
+    input_variables=["question"],
+)
 
-# Define prompts
+
+# Prompt to get the chat history context for follow-up questions
 contextualize_q_system_prompt = (
     "Given a chat history and the latest user question "
     "which might reference context in the chat history, "
@@ -50,14 +65,14 @@ contextualize_q_prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-# Question answering system prompt
+# System prompt for question answering
 system_prompt = (
     "You are an assistant for question-answering tasks. "
-    "Use the following pieces of retrieved context to answer the questions."
-    "Answer the following question and avoid giving any harmful, inappropriate, or biased content."
-    "Respond respectfully and ethically. Do not answer inappropriate or harmful questions."
-    "If the answer does not exist in the vector database,"
-    "Nicely inform the user that you are unable to answer questions that are not in the NYP CNC database."
+    "Use the following pieces of retrieved context to answer the questions. "
+    "Answer the following question and avoid giving any harmful, inappropriate, or biased content. "
+    "Respond respectfully and ethically. Do not answer inappropriate or harmful questions. "
+    "If the answer does not exist in the vector database, "
+    "nicely inform the user that you cannot answer questions that are not in the NYP CNC database. "
     "Keep the answer concise."
     "\n\n"
     "{context}"
@@ -77,8 +92,14 @@ for model in config_data['models']:
     # Create the LLM for this iteration
     llm = ChatOpenAI(temperature=model['temperature'], model=model['name'])
 
+    multiquery_retriever = MultiQueryRetriever.from_llm(
+        retriever=retriever,
+        llm=llm,
+        prompt=multi_query_template
+    )
+
     history_aware_retriever = create_history_aware_retriever(
-        llm, retriever, contextualize_q_prompt
+        llm, multiquery_retriever, contextualize_q_prompt
     )
 
     question_answer_chain = create_stuff_documents_chain(llm, qa_prompt)
@@ -121,13 +142,20 @@ for model in config_data['models']:
 
 
     # Main interaction loop
-    print("Enter your question here ('Exit' to end):")
+    print('-'*150)
+    print('Using',model['name'])
+    print('='*150)
+    # print("Enter your question here ('Exit' to end):")
     while True:
+        print("Enter your question here ('Exit' to end):")
         question = input()
+        print()
         if question.lower() == "exit":
+            print()
             break
         
         response = app.invoke({"input":question},config=config)
 
         # result = response["result"]
         print(response['answer'])
+        print('='*150)

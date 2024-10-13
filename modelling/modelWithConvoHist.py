@@ -1,4 +1,4 @@
-# MODEL WITH CONVO HISTORY
+# MODEL WITH CONVO HIST AND MULTI QUERY CAPABILITY
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
 import openai
@@ -13,6 +13,8 @@ from langchain.chains import create_history_aware_retriever, create_retrieval_ch
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from dotenv import load_dotenv
 from typing import Sequence
+from langchain.retrievers.multi_query import MultiQueryRetriever
+from langchain.prompts import PromptTemplate
 
 # Load environment variables from .env file
 load_dotenv()
@@ -22,16 +24,34 @@ DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 
-# setting the LLM 
+# Set the LLM
 llm = ChatOpenAI(temperature=0.7, model="gpt-4o-mini")
 
-# change the retriever params (between 3 to 5)
+# Load embeddings and Chroma database
 embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL)
 db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding)
-retriever = db.as_retriever(search_kwargs={'k': 3})
+
+# Define the multi-query generation template for retriever
+multi_query_template = PromptTemplate(
+    template=(
+        "The user has asked a complex question or multiple related questions: {question}.\n"
+        "1. First, split the query into distinct questions if there are multiple.\n"
+        "2. Then, for each distinct question, generate 3 rephrasings that would return "
+        "similar but slightly different relevant results.\n"
+        "Return each question on a new line with its rephrasings.\n"
+    ),
+    input_variables=["question"],
+)
+
+# Create the multi-query retriever
+multiquery_retriever = MultiQueryRetriever.from_llm(
+    retriever=db.as_retriever(search_kwargs={'k': 3}),
+    llm=llm,
+    prompt=multi_query_template
+)
 
 
-# prompt to get the chat history context for followup questions
+# Prompt to get the chat history context for follow-up questions
 contextualize_q_system_prompt = (
     "Given a chat history and the latest user question "
     "which might reference context in the chat history, "
@@ -40,7 +60,7 @@ contextualize_q_system_prompt = (
     "just reformulate it if needed and otherwise return it as is."
 )
 
-# setting the prompt template for history context
+# Setting the prompt template for history context
 contextualize_q_prompt = ChatPromptTemplate.from_messages(
     [
         ("system", contextualize_q_system_prompt),
@@ -49,24 +69,25 @@ contextualize_q_prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
+# Create history-aware retriever with multi-query integration
 history_aware_retriever = create_history_aware_retriever(
-    llm, retriever, contextualize_q_prompt
+    llm, multiquery_retriever, contextualize_q_prompt
 )
 
-# prompt for question answering
+# System prompt for question answering
 system_prompt = (
     "You are an assistant for question-answering tasks. "
-    "Use the following pieces of retrieved context to answer the questions."
-    "Answer the following question and avoid giving any harmful, inappropriate, or biased content."
-    "Respond respectfully and ethically. Do not answer inappropriate or harmful questions."
-    "If the answer does not exist in the vector database,"
-    "Nicely inform the user that you cannot answer questions that are not in the NYP CNC database."
+    "Use the following pieces of retrieved context to answer the questions. "
+    "Answer the following question and avoid giving any harmful, inappropriate, or biased content. "
+    "Respond respectfully and ethically. Do not answer inappropriate or harmful questions. "
+    "If the answer does not exist in the vector database, "
+    "nicely inform the user that you cannot answer questions that are not in the NYP CNC database. "
     "Keep the answer concise."
     "\n\n"
     "{context}"
 )
 
-# creating the prompt template for question answering
+# Creating the prompt template for question answering
 qa_prompt = ChatPromptTemplate.from_messages(
     [
         ("system", system_prompt),
@@ -75,24 +96,18 @@ qa_prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
+# Create the question-answer chain with multi-query retriever
 question_answer_chain = create_stuff_documents_chain(llm, qa_prompt)
-
 rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chain)
 
-### Statefully manage chat history ###
-
-# We define a dict representing the state of the application.
-# This state has the same input and output keys as `rag_chain`.
+# Statefully manage chat history
 class State(TypedDict):
     input: str
     chat_history: Annotated[Sequence[BaseMessage], add_messages]
     context: str
     answer: str
 
-
-# We then define a simple node that runs the `rag_chain`.
-# The `return` values of the node update the graph state, so here we just
-# update the chat history with the input message and response.
+# Define the function to call the model and manage state
 def call_model(state: State):
     response = rag_chain.invoke(state)
     return {
@@ -104,19 +119,14 @@ def call_model(state: State):
         "answer": response["answer"],
     }
 
-
-# Our graph consists only of one node:
+# Create the workflow with the state graph
 workflow = StateGraph(state_schema=State)
 workflow.add_edge(START, "model")
 workflow.add_node("model", call_model)
 
-# Finally, we compile the graph with a checkpointer object.
-# This persists the state, in this case in memory.
+# Compile the graph with a checkpointer to persist state
 memory = MemorySaver()
 app = workflow.compile(checkpointer=memory)
-
-config = {"configurable": {"thread_id": "abc123"}}
-
 
 # Main interaction loop
 print("Enter your question here ('Exit' to end):")
@@ -124,9 +134,9 @@ while True:
     question = input()
     if question.lower() == "exit":
         break
-    response = app.invoke({"input":question},config=config)
+    response = app.invoke({"input": question}, config={"configurable": {"thread_id": "abc123"}})
     
-    # result = response["result"]
+    # Print the answer
     print(response['answer'])
     print()
     print("Enter your question here ('Exit' to end):")
