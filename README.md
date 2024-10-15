@@ -38,7 +38,7 @@ A brief description of what this project does and who it's for
   cd ..
 ```
 
-4. Install requirements
+5. Install requirements
 
 ```bash
   pip3 install -r requirements.txt
