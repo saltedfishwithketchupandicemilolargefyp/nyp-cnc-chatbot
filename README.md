@@ -21,13 +21,15 @@ A brief description of what this project does and who it's for
 
 3. Create a virtual environment
 
-      a. Open a terminal (powershell)
+   Open a terminal (powershell)
    
 ```bash
   python -m venv .venv
 ```
 
-      b. To activate the venv, create a new terminal, a command prompt terminal (NOT powershell)
+4. Activate the venv
+
+   To activate the venv, create a new terminal, a command prompt terminal (NOT powershell)
       
 ```bash
   cd .venv\Scripts
