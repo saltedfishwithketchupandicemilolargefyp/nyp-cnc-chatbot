@@ -28,7 +28,7 @@ A brief description of what this project does and who it's for
 ```
 
       a. Open a terminal (powershell)
-      b. To activate the venv, create a new terminal, a command prompt terminal (NOT powershell)
+b. To activate the venv, create a new terminal, a command prompt terminal (NOT powershell)
       
 ```bash
   cd .venv\Scripts
