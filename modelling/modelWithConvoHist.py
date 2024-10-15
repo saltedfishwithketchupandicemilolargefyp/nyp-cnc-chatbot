@@ -34,8 +34,10 @@ db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding)
 # Define the multi-query generation template for retriever
 multi_query_template = PromptTemplate(
     template=(
-        "The user has asked a complex question or multiple related questions: {question}.\n"
-        "1. First, split the query into distinct questions if there are multiple.\n"
+        "The user has asked a question: {question}.\n"
+        "1. First, check if it is a complex question or multiple related questions. "
+        "If yes, split the query into distinct questions if there are multiple and move on to point 2."
+        "Else, just return the question, and break.\n"
         "2. Then, for each distinct question, generate 3 rephrasings that would return "
         "similar but slightly different relevant results.\n"
         "Return each question on a new line with its rephrasings.\n"
@@ -49,7 +51,6 @@ multiquery_retriever = MultiQueryRetriever.from_llm(
     llm=llm,
     prompt=multi_query_template
 )
-
 
 # Prompt to get the chat history context for follow-up questions
 contextualize_q_system_prompt = (
