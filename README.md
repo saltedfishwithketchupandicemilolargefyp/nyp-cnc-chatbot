@@ -10,7 +10,7 @@ A brief description of what this project does and who it's for
 
 2. Install [Python Version 3.10.2](https://www.python.org/downloads/release/python-3102/)
 
-  a. Open the installer and ensure to check the box (add to PATH) on the bottom of the installer screen.
+    a. Open the installer and ensure to check the box (add to PATH) on the bottom of the installer screen.
 
   b.	Once done, open the cloned git hub repository.
 
