@@ -10,29 +10,34 @@ A brief description of what this project does and who it's for
 
 2. Install [Python Version 3.10.2](https://www.python.org/downloads/release/python-3102/)
 
-    a. Open the installer and ensure to check the box (add to PATH) on the bottom of the installer screen.
+      a. Open the installer and ensure to check the box (add to PATH) on the bottom of the installer screen.
 
-  b.	Once done, open the cloned git hub repository.
+      b.	Once done, open the cloned git hub repository.
 
-  c.	Ctrl + Shift + P and search 'Python: Select Interpreter'
+      c.	Ctrl + Shift + P and search 'Python: Select Interpreter'
   
-  d.	Find and select Python 3.10.2 
+      d.	Find and select Python 3.10.2 
 
 
 3. Create a virtual environment
 
-  a. Open a terminal (powershell) 
+      a. Open a terminal (powershell)
+   
 ```bash
   python -m venv .venv
 ```
-  b. To activate the venv, create a new terminal, a command prompt terminal (NOT powershell)
+
+      b. To activate the venv, create a new terminal, a command prompt terminal (NOT powershell)
+      
 ```bash
   cd .venv\Scripts
   activate
   cd ..
   cd ..
 ```
+
 4. Install requirements
+
 ```bash
   pip3 install -r requirements.txt
 ```
