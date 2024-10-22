@@ -1,4 +1,5 @@
-# MODEL WITH CONVO HIST AND MULTI QUERY CAPABILITY
+# Required imports
+import time
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
 import openai
@@ -45,7 +46,6 @@ multi_query_template = PromptTemplate(
     ),
     input_variables=["question"],
 )
-
 
 # Prompt to get the chat history context for follow-up questions
 contextualize_q_system_prompt = (
@@ -112,10 +112,7 @@ for model in config_data['models']:
         context: str
         answer: str
 
-
-    # We then define a simple node that runs the `rag_chain`.
-    # The `return` values of the node update the graph state, so here we just
-    # update the chat history with the input message and response.
+    # Node to run the RAG chain and update the state
     def call_model(state: State):
         response = rag_chain.invoke(state)
         return {
@@ -127,35 +124,47 @@ for model in config_data['models']:
             "answer": response["answer"],
         }
 
-
-    # Our graph consists only of one node:
+    # Graph definition
     workflow = StateGraph(state_schema=State)
     workflow.add_edge(START, "model")
     workflow.add_node("model", call_model)
 
-    # Finally, we compile the graph with a checkpointer object.
-    # This persists the state, in this case in memory.
+    # MemorySaver to checkpoint state
     memory = MemorySaver()
     app = workflow.compile(checkpointer=memory)
 
     config = {"configurable": {"thread_id": "abc123"}}
 
-
     # Main interaction loop
     print('-'*150)
-    print('Using',model['name'])
+    print(f'Using {model["name"]}')
     print('='*150)
-    # print("Enter your question here ('Exit' to end):")
+
     while True:
         print("Enter your question here ('Exit' to end):")
         question = input()
-        print()
         if question.lower() == "exit":
-            print()
             break
-        
-        response = app.invoke({"input":question},config=config)
 
-        # result = response["result"]
-        print(response['answer'])
+        # Measure response time
+        start_time = time.time()
+
+        # Invoke the model
+        response = app.invoke({"input": question}, config=config)
+
+        # Measure end time
+        end_time = time.time()
+
+        # Calculate response time
+        response_time = end_time - start_time
+
+        # Fetch token usage if available
+        token_usage = response.get("usage", {}).get("total_tokens", "N/A")
+
+        # Display response and performance metrics
+        print(f"Response: {response['answer']}")
+        print(f"Response Time: {response_time:.2f} seconds")
+        print(f"Total Tokens Used: {token_usage}\n")
+        print(response)
+
         print('='*150)
