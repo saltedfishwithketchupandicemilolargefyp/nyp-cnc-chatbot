@@ -90,7 +90,7 @@ qa_prompt = ChatPromptTemplate.from_messages(
 # Loop through each model in config.yaml
 for model in config_data['models']:
     # Create the LLM for this iteration
-    llm = ChatOpenAI(temperature=model['temperature'], model=model['name'])
+    llm = ChatOpenAI(temperature=model['temperature'], model=model['name'], streaming=True)
 
     multiquery_retriever = MultiQueryRetriever.from_llm(
         retriever=retriever,

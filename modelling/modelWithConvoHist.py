@@ -24,8 +24,8 @@ DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 
-# Set the LLM
-llm = ChatOpenAI(temperature=0.7, model="gpt-4o-mini")
+# Set the LLM with streaming enabled
+llm = ChatOpenAI(temperature=0.7, model="gpt-4o-mini", streaming=True)
 
 # Load embeddings and Chroma database
 embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL)
@@ -108,16 +108,21 @@ class State(TypedDict):
     context: str
     answer: str
 
-# Define the function to call the model and manage state
+# Define the function to call the model and manage state with streaming
 def call_model(state: State):
-    response = rag_chain.invoke(state)
+    response = ""
+    for chunk in rag_chain.stream_invoke(state):  # Use `stream_invoke` for streaming output
+        partial_answer = chunk["answer"]
+        response += partial_answer
+        print(partial_answer, end='', flush=True)  # Stream output in real-time
+
     return {
         "chat_history": [
             HumanMessage(state["input"]),
-            AIMessage(response["answer"]),
+            AIMessage(response),
         ],
-        "context": response["context"],
-        "answer": response["answer"],
+        "context": response,  # Use final accumulated response
+        "answer": response,
     }
 
 # Create the workflow with the state graph
@@ -135,9 +140,7 @@ while True:
     question = input()
     if question.lower() == "exit":
         break
+    print("Answer:", end=' ')  # Prepare for streamed answer
     response = app.invoke({"input": question}, config={"configurable": {"thread_id": "abc123"}})
-    
-    # Print the answer
-    print(response['answer'])
-    print()
+    print()  # For a new line after streaming completes
     print("Enter your question here ('Exit' to end):")
