@@ -25,7 +25,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 
 # Set the LLM with streaming enabled
-llm = ChatOpenAI(temperature=0.7, model="gpt-4o-mini", streaming=True)
+llm = ChatOpenAI(temperature=0.7, model="gpt-4o")
 
 # Load embeddings and Chroma database
 embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL)
@@ -100,6 +100,7 @@ qa_prompt = ChatPromptTemplate.from_messages(
 # Create the question-answer chain with multi-query retriever
 question_answer_chain = create_stuff_documents_chain(llm, qa_prompt)
 rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chain)
+# chain = rag_chain.pick("answer")
 
 # Statefully manage chat history
 class State(TypedDict):
@@ -110,29 +111,27 @@ class State(TypedDict):
 
 # Define the function to call the model and manage state with streaming
 def call_model(state: State):
-    response = ""
-    for chunk in rag_chain.stream_invoke(state):  # Use `stream_invoke` for streaming output
-        partial_answer = chunk["answer"]
-        response += partial_answer
-        print(partial_answer, end='', flush=True)  # Stream output in real-time
-
+    response = rag_chain.invoke(state)
     return {
-        "chat_history": [
-            HumanMessage(state["input"]),
-            AIMessage(response),
-        ],
-        "context": response,  # Use final accumulated response
-        "answer": response,
-    }
+            "chat_history": [
+                HumanMessage(state["input"]),
+                AIMessage(response["answer"]),
+            ],
+            "context": response["context"],
+            "answer": response["answer"],
+        }
 
 # Create the workflow with the state graph
 workflow = StateGraph(state_schema=State)
 workflow.add_edge(START, "model")
 workflow.add_node("model", call_model)
 
+
 # Compile the graph with a checkpointer to persist state
 memory = MemorySaver()
 app = workflow.compile(checkpointer=memory)
+
+config = {"configurable": {"thread_id": "abc123"}}
 
 # Main interaction loop
 print("Enter your question here ('Exit' to end):")
@@ -140,7 +139,8 @@ while True:
     question = input()
     if question.lower() == "exit":
         break
-    print("Answer:", end=' ')  # Prepare for streamed answer
-    response = app.invoke({"input": question}, config={"configurable": {"thread_id": "abc123"}})
+    response = app.invoke({"input": question}, config=config)
+    print(response["answer"])
+
     print()  # For a new line after streaming completes
     print("Enter your question here ('Exit' to end):")

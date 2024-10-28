@@ -158,13 +158,9 @@ for model in config_data['models']:
         # Calculate response time
         response_time = end_time - start_time
 
-        # Fetch token usage if available
-        token_usage = response.get("usage", {}).get("total_tokens", "N/A")
-
         # Display response and performance metrics
         print(f"Response: {response['answer']}")
         print(f"Response Time: {response_time:.2f} seconds")
-        print(f"Total Tokens Used: {token_usage}\n")
         print(response)
 
         print('='*150)

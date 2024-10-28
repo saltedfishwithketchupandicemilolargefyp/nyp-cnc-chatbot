@@ -41,6 +41,13 @@ def split_text(documents: list[Document]):
     chunks = text_splitter.split_documents(documents)
     print(f"Split {len(documents)} documents into {len(chunks)} chunks.")
 
+    print('Example Chunks:')
+    print(chunks[1])
+    print('='*155)
+    print(chunks[124])
+    print('='*155)
+    print(chunks[59])
+
     return chunks
 
 def split_list(chunks, batch_size):
