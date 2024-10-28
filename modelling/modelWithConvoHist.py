@@ -25,7 +25,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 
 # Set the LLM with streaming enabled
-llm = ChatOpenAI(temperature=0.7, model="gpt-4o")
+llm = ChatOpenAI(temperature=0.7, model="gpt-3.5-turbo")
 
 # Load embeddings and Chroma database
 embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL)
@@ -100,7 +100,6 @@ qa_prompt = ChatPromptTemplate.from_messages(
 # Create the question-answer chain with multi-query retriever
 question_answer_chain = create_stuff_documents_chain(llm, qa_prompt)
 rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chain)
-# chain = rag_chain.pick("answer")
 
 # Statefully manage chat history
 class State(TypedDict):
@@ -126,7 +125,6 @@ workflow = StateGraph(state_schema=State)
 workflow.add_edge(START, "model")
 workflow.add_node("model", call_model)
 
-
 # Compile the graph with a checkpointer to persist state
 memory = MemorySaver()
 app = workflow.compile(checkpointer=memory)
@@ -142,5 +140,5 @@ while True:
     response = app.invoke({"input": question}, config=config)
     print(response["answer"])
 
-    print()  # For a new line after streaming completes
+    print()  
     print("Enter your question here ('Exit' to end):")
