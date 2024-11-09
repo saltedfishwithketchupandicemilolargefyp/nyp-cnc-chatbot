@@ -25,7 +25,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 
 # Set the LLM with streaming enabled
-llm = ChatOpenAI(temperature=0.7, model="gpt-3.5-turbo")
+llm = ChatOpenAI(temperature=0.8, model="gpt-3.5-turbo")
 
 # Load embeddings and Chroma database
 embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL)

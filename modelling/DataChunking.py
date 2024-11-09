@@ -32,7 +32,7 @@ def load_text(DATA_PATH):
 # Splitting text into chunks
 def split_text(documents: list[Document]):
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=800,
+        chunk_size=1000,
         chunk_overlap=400,
         length_function=len,
         add_start_index=True
@@ -41,12 +41,13 @@ def split_text(documents: list[Document]):
     chunks = text_splitter.split_documents(documents)
     print(f"Split {len(documents)} documents into {len(chunks)} chunks.")
 
+    # printing some chunks for visualisation, can be removed if not needed
     print('Example Chunks:')
     print(chunks[1])
-    print('='*155)
-    print(chunks[124])
-    print('='*155)
-    print(chunks[59])
+    print('='*100)
+    print(chunks[2])
+    print('='*100)
+    print(chunks[3])
 
     return chunks
 
