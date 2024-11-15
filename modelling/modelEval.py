@@ -16,6 +16,11 @@ from typing import Sequence
 from langchain.retrievers.multi_query import MultiQueryRetriever
 from langchain.prompts import PromptTemplate
 
+LANGCHAIN_TRACING_V2="true"
+LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
+LANGCHAIN_API_KEY= os.getenv("LANGCHAIN_API_KEY")
+LANGCHAIN_PROJECT="fypj-aichatbot"
+
 # Load environment variables from .env file
 load_dotenv()
 # Access the variables from the .env file
