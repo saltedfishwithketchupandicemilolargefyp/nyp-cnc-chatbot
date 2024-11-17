@@ -130,11 +130,14 @@ app = workflow.compile(checkpointer=memory)
 # evaluation setup
 config = {"configurable": {"thread_id": "abc123"}}
 
+# prompts for evaluation
 grade_prompt_hallucinations = hub.pull("langchain-ai/rag-answer-hallucination")
 grade_prompt_answer_helpfulness = hub.pull("langchain-ai/rag-answer-helpfulness")
 
-grader_llm = ChatOpenAI(model="gpt-4-turbo", temperature=0)
+# llm for grading
+grader_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
+# loading in the dataset
 dataset_name = "RAG Chatbot Dataset"
 examples = list(client.list_examples(dataset_name=dataset_name))
 
@@ -154,13 +157,13 @@ def predict_rag_answer_with_context(example: dict):
         "context": response["context"]
     }
 
+
 # evaluation functions
 def answer_helpfulness_evaluator(run, example):
     """evaluate how helpful the answers are"""
     input_question = example.inputs["input"]
-    prediction = run.outputs["answer"]
-    llm = ChatOpenAI(model="gpt-4-turbo", temperature=0)
-    answer_grader = grade_prompt_answer_helpfulness | llm
+    prediction = example.outputs["answer"]
+    answer_grader = grade_prompt_answer_helpfulness | grader_llm
     result = answer_grader.invoke({
         "question": input_question,
         "student_answer": prediction
@@ -172,8 +175,7 @@ def answer_hallucination_evaluator(run, example):
     page_contents = [doc['page_content'] for doc in example.outputs["context"]]
     contexts = page_contents
     prediction = example.outputs["answer"]
-    llm = ChatOpenAI(model="gpt-4-turbo", temperature=0)
-    answer_grader = grade_prompt_hallucinations | llm
+    answer_grader = grade_prompt_hallucinations | grader_llm
     result = answer_grader.invoke({
         "documents": contexts,
         "student_answer": prediction
