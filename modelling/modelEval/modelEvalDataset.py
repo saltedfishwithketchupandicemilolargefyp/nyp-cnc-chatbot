@@ -1,4 +1,7 @@
+# same as modelWithConvoHist.py, just that tracing is enabled here for offline evaluation.
 # import required libraries for langchain, openai, and other utilities
+from langsmith import Client
+from langchain.callbacks import LangChainTracer
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
 import openai
@@ -18,11 +21,23 @@ from langchain.prompts import PromptTemplate
 
 # load environment variables from .env file for secure configuration
 load_dotenv()
+
 # get environment variables for paths and api keys
 CHROMA_PATH = os.getenv("CHROMA_PATH")
 DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
+
+# setting up tracing project
+callbacks = [
+LangChainTracer(
+  project_name= "fypj-p3-ai-chatbot",
+  client=Client(
+    api_url="https://api.smith.langchain.com",
+    api_key=os.getenv("LANGCHAIN_API_KEY")
+  )
+)
+]
 
 # initialize the language model with temperature for creativity
 llm = ChatOpenAI(temperature=0.8, model="gpt-4o-mini")

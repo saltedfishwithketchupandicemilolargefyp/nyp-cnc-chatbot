@@ -1,7 +1,8 @@
-# MODEL WITH CONVO HIST AND MULTI QUERY CAPABILITY
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+# import necessary libraries for rag implementation and evaluation
 from langsmith import Client
-from langchain.callbacks import LangChainTracer
+from langsmith.evaluation import evaluate
+from langchain import hub
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
 import openai
 import os
@@ -17,36 +18,26 @@ from dotenv import load_dotenv
 from typing import Sequence
 from langchain.retrievers.multi_query import MultiQueryRetriever
 from langchain.prompts import PromptTemplate
+from pprint import pprint
 
-# Load environment variables from .env file
+# setup environment and configuration
 load_dotenv()
-
-callbacks = [
-LangChainTracer(
-  project_name= "fypj-ai-chatbot",
-  client=Client(
-    api_url="https://api.smith.langchain.com",
-    api_key=os.getenv("LANGCHAIN_API_KEY")
-  )
-)
-]
-
-# Access the variables from the .env file
 CHROMA_PATH = os.getenv("CHROMA_PATH")
 DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
+client = Client(api_key=os.getenv("LANGCHAIN_API_KEY"))
 
-# Set the LLM with streaming enabled
+# initialize the language model with temperature 0.8 for some creativity
 llm = ChatOpenAI(temperature=0.8, model="gpt-4o-mini")
 
-# Load embeddings and Chroma database
+# set up vector database with embeddings
 embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL)
 db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding)
 
-# Define the multi-query generation template for retriever
+# define template for generating multiple query variations
 multi_query_template = PromptTemplate(
-    template=( 
+    template=(
         "The user has asked a question: {question}.\n"
         "1. First, check if it is a complex question or multiple related questions. "
         "If yes, split the query into distinct questions if there are multiple and move on to point 2."
@@ -58,14 +49,14 @@ multi_query_template = PromptTemplate(
     input_variables=["question"],
 )
 
-# Create the multi-query retriever
+# create retriever that generates multiple queries for better search results
 multiquery_retriever = MultiQueryRetriever.from_llm(
     retriever=db.as_retriever(search_kwargs={'k': 3}),
     llm=llm,
     prompt=multi_query_template
 )
 
-# Prompt to get the chat history context for follow-up questions
+# prompt to handle chat history context
 contextualize_q_system_prompt = (
     "Given a chat history and the latest user question "
     "which might reference context in the chat history, "
@@ -74,21 +65,19 @@ contextualize_q_system_prompt = (
     "just reformulate it if needed and otherwise return it as is."
 )
 
-# Setting the prompt template for history context
-contextualize_q_prompt = ChatPromptTemplate.from_messages(
-    [
-        ("system", contextualize_q_system_prompt),
-        MessagesPlaceholder("chat_history"),
-        ("human", "{input}"),
-    ]
-)
+# set up chat history aware retrieval system
+contextualize_q_prompt = ChatPromptTemplate.from_messages([
+    ("system", contextualize_q_system_prompt),
+    MessagesPlaceholder("chat_history"),
+    ("human", "{input}"),
+])
 
-# Create history-aware retriever with multi-query integration
+# create retriever that considers conversation history
 history_aware_retriever = create_history_aware_retriever(
     llm, multiquery_retriever, contextualize_q_prompt
 )
 
-# System prompt for question answering
+# define system prompt for the qa system
 system_prompt = (
     "You are an assistant for question-answering tasks. "
     "Use ONLY the following pieces of retrieved context to answer the questions. "
@@ -101,33 +90,26 @@ system_prompt = (
     "{context}"
 )
 
-# Creating the prompt template for question answering
-qa_prompt = ChatPromptTemplate.from_messages(
-    [
-        ("system", system_prompt),
-        MessagesPlaceholder("chat_history"),
-        ("human", "{input}"),
-    ]
-)
+# set up the complete rag pipeline
+qa_prompt = ChatPromptTemplate.from_messages([
+    ("system", system_prompt),
+    MessagesPlaceholder("chat_history"),
+    ("human", "{input}"),
+])
 
-# Create the question-answer chain with multi-query retriever
 question_answer_chain = create_stuff_documents_chain(llm, qa_prompt)
 rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chain)
 
-# Statefully manage chat history
+# define state management for conversation
 class State(TypedDict):
     input: str
     chat_history: Annotated[Sequence[BaseMessage], add_messages]
     context: str
     answer: str
 
-# Define the function to call the model and manage state with streaming
+# function to process input and generate response
 def call_model(state: State):
-
-    # Invoke the chain to get the response
     response = rag_chain.invoke(state)
-
-    # Return the chat history and response
     return {
         "chat_history": [
             HumanMessage(state["input"]),
@@ -137,25 +119,80 @@ def call_model(state: State):
         "answer": response["answer"],
     }
 
-# Create the workflow with the state graph
+# set up workflow management
 workflow = StateGraph(state_schema=State)
 workflow.add_edge(START, "model")
 workflow.add_node("model", call_model)
 
-# Compile the graph with a checkpointer to persist state
 memory = MemorySaver()
 app = workflow.compile(checkpointer=memory)
 
-config = {"configurable": {"thread_id": "abc123"}, "callbacks": callbacks}
+# evaluation setup
+config = {"configurable": {"thread_id": "abc123"}}
 
-# Main interaction loop
-print("Enter your question here ('Exit' to end):")
-while True:
-    question = input()
-    if question.lower() == "exit":
-        break
+grade_prompt_hallucinations = hub.pull("langchain-ai/rag-answer-hallucination")
+grade_prompt_answer_helpfulness = hub.pull("langchain-ai/rag-answer-helpfulness")
+
+grader_llm = ChatOpenAI(model="gpt-4-turbo", temperature=0)
+
+dataset_name = "RAG Chatbot Dataset"
+examples = list(client.list_examples(dataset_name=dataset_name))
+
+# prediction functions for evaluation
+def predict_rag_answer(example):
+    """generate answers for basic evaluation"""
+    question = example["input"]
     response = app.invoke({"input": question}, config=config)
-    print(response["answer"])
+    return {"answer": response["answer"]}
 
-    print()  
-    print("Enter your question here ('Exit' to end):")
+def predict_rag_answer_with_context(example: dict):
+    """generate answers with context for hallucination checking"""
+    question = example["input"]
+    response = app.invoke({"input": question}, config=config)
+    return {
+        "answer": response["answer"], 
+        "context": response["context"]
+    }
+
+# evaluation functions
+def answer_helpfulness_evaluator(run, example):
+    """evaluate how helpful the answers are"""
+    input_question = example.inputs["input"]
+    prediction = run.outputs["answer"]
+    llm = ChatOpenAI(model="gpt-4-turbo", temperature=0)
+    answer_grader = grade_prompt_answer_helpfulness | llm
+    result = answer_grader.invoke({
+        "question": input_question,
+        "student_answer": prediction
+    })
+    return {"key": "answer_helpfulness_score", "score": result["Score"]}
+
+def answer_hallucination_evaluator(run, example):
+    """check if answers contain information not present in context"""
+    page_contents = [doc['page_content'] for doc in example.outputs["context"]]
+    contexts = page_contents
+    prediction = example.outputs["answer"]
+    llm = ChatOpenAI(model="gpt-4-turbo", temperature=0)
+    answer_grader = grade_prompt_hallucinations | llm
+    result = answer_grader.invoke({
+        "documents": contexts,
+        "student_answer": prediction
+    })
+    return {"key": "answer_hallucination", "score": result["Score"]}
+
+# run evaluations
+helpfulness_results = evaluate(
+    predict_rag_answer,
+    data=examples,
+    evaluators=[answer_helpfulness_evaluator],
+    experiment_prefix="rag-answer-helpfulness",
+    metadata={"version": "helpfulness-evaluation-v1"}
+)
+
+hallucination_results = evaluate(
+    predict_rag_answer_with_context, 
+    data=examples,
+    evaluators=[answer_hallucination_evaluator],
+    experiment_prefix="rag-answer-hallucination",
+    metadata={"version": "hallucination-evaluation-v1"}
+)

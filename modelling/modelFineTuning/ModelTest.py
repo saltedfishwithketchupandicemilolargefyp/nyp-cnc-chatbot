@@ -1,4 +1,5 @@
-# Required imports
+# required imports for building a retrieval-augmented generation (rag) system
+# core dependencies for time tracking and environment variables
 import time
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_chroma import Chroma
@@ -18,24 +19,30 @@ from langchain.retrievers.multi_query import MultiQueryRetriever
 from langchain.prompts import PromptTemplate
 import yaml
 
-# Load environment variables from .env file
+# load environment configuration from .env file for secure credential management
 load_dotenv()
-# Access the variables from the .env file
-CHROMA_PATH = os.getenv("CHROMA_PATH")
-DATA_PATH = os.getenv("DATA_PATH")
-openai.api_key = os.getenv("OPENAI_API_KEY")
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 
-# Load models configuration from config.yaml
+# retrieve environment variables for configuration
+CHROMA_PATH = os.getenv("CHROMA_PATH")          # path to vector database storage
+DATA_PATH = os.getenv("DATA_PATH")              # path to source documents
+openai.api_key = os.getenv("OPENAI_API_KEY")    # openai api authentication
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")   # model for generating embeddings
+
+# load model configurations from yaml file
+# allows for easy modification of model parameters without changing code
 with open("config.yaml", "r") as config_file:
     config_data = yaml.safe_load(config_file)
 
-# Setup retriever
+# initialize the vector database and retriever
+# setup embedding model for converting text to vectors
 embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL)
+# initialize chromadb with the specified embedding function
 db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding)
+# create retriever that fetches top 3 most relevant documents
 retriever = db.as_retriever(search_kwargs={'k': 3})
 
-# Define the multi-query generation template for retriever
+# define template for generating multiple versions of the input query
+# this helps improve retrieval by considering different phrasings
 multi_query_template = PromptTemplate(
     template=(
         "The user has asked a complex question or multiple related questions: {question}.\n"
@@ -47,7 +54,8 @@ multi_query_template = PromptTemplate(
     input_variables=["question"],
 )
 
-# Prompt to get the chat history context for follow-up questions
+# system prompt for processing chat history and current question
+# helps maintain context across conversation turns
 contextualize_q_system_prompt = (
     "Given a chat history and the latest user question "
     "which might reference context in the chat history, "
@@ -56,7 +64,8 @@ contextualize_q_system_prompt = (
     "just reformulate it if needed and otherwise return it as is."
 )
 
-# History context prompt template
+# template for handling conversation history and new questions
+# combines system instructions with chat history and user input
 contextualize_q_prompt = ChatPromptTemplate.from_messages(
     [
         ("system", contextualize_q_system_prompt),
@@ -65,7 +74,8 @@ contextualize_q_prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-# System prompt for question answering
+# main system prompt for the qa system
+# defines behavior, constraints, and response format
 system_prompt = (
     "You are an assistant for question-answering tasks. "
     "Use the following pieces of retrieved context to answer the questions. "
@@ -78,7 +88,7 @@ system_prompt = (
     "{context}"
 )
 
-# QA prompt template
+# qa prompt template combining system prompt, chat history, and user input
 qa_prompt = ChatPromptTemplate.from_messages(
     [
         ("system", system_prompt),
@@ -87,32 +97,37 @@ qa_prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-# Loop through each model in config.yaml
+# process each model specified in the configuration
 for model in config_data['models']:
-    # Create the LLM for this iteration
+    # initialize language model with specified parameters
     llm = ChatOpenAI(temperature=model['temperature'], model=model['name'], streaming=True)
 
+    # create retriever that generates multiple query variations
     multiquery_retriever = MultiQueryRetriever.from_llm(
         retriever=retriever,
         llm=llm,
         prompt=multi_query_template
     )
 
+    # create retriever that incorporates conversation history
     history_aware_retriever = create_history_aware_retriever(
         llm, multiquery_retriever, contextualize_q_prompt
     )
 
+    # create chain for processing retrieved documents and generating answers
     question_answer_chain = create_stuff_documents_chain(llm, qa_prompt)
 
+    # combine retrieval and question answering into a single chain
     rag_chain = create_retrieval_chain(history_aware_retriever, question_answer_chain)
 
+    # define the structure for maintaining conversation state
     class State(TypedDict):
-        input: str
-        chat_history: Annotated[Sequence[BaseMessage], add_messages]
-        context: str
-        answer: str
+        input: str                                                    # user's question
+        chat_history: Annotated[Sequence[BaseMessage], add_messages]  # conversation history
+        context: str                                                  # retrieved context
+        answer: str                                                   # generated response
 
-    # Node to run the RAG chain and update the state
+    # function to process input and generate response using the rag chain
     def call_model(state: State):
         response = rag_chain.invoke(state)
         return {
@@ -124,41 +139,41 @@ for model in config_data['models']:
             "answer": response["answer"],
         }
 
-    # Graph definition
+    # setup the conversation workflow
     workflow = StateGraph(state_schema=State)
-    workflow.add_edge(START, "model")
-    workflow.add_node("model", call_model)
+    workflow.add_edge(START, "model")           # connect starting point to model
+    workflow.add_node("model", call_model)      # add model processing node
 
-    # MemorySaver to checkpoint state
+    # initialize system for saving conversation state
     memory = MemorySaver()
     app = workflow.compile(checkpointer=memory)
 
+    # configuration for the conversation thread
     config = {"configurable": {"thread_id": "abc123"}}
 
-    # Main interaction loop
+    # main loop for handling user interactions
     print('-'*150)
     print(f'Using {model["name"]}')
     print('='*150)
 
+    # continuous interaction loop
     while True:
         print("Enter your question here ('Exit' to end):")
         question = input()
         if question.lower() == "exit":
             break
 
-        # Measure response time
+        # track start time for performance monitoring
         start_time = time.time()
 
-        # Invoke the model
+        # process the question through the rag system
         response = app.invoke({"input": question}, config=config)
 
-        # Measure end time
+        # calculate processing time
         end_time = time.time()
-
-        # Calculate response time
         response_time = end_time - start_time
 
-        # Display response and performance metrics
+        # output results and performance metrics
         print(f"Response: {response['answer']}")
         print(f"Response Time: {response_time:.2f} seconds")
         print(response)

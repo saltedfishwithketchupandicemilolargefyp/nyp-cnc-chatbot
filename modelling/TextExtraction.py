@@ -1,58 +1,64 @@
+# import required libraries for handling different document types
 from pdfminer.high_level import extract_text
 import os
 from docx import Document
 from pptx import Presentation
 import openpyxl
 
-# Function to extract text from PDF files using pdfminer.six
+# function to extract text from pdf files
+# uses pdfminer.six library to process each pdf and combine their text
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
         text += extract_text(pdf)
     return text
 
-# Function to extract text from DOCX files including text from images using OCR
+# function to extract text from word documents (.docx)
+# processes paragraphs, tables and embedded content
 def get_docx_text(docx_docs):
     text = ""
     for docx in docx_docs:
         doc = Document(docx)
         
-        # Extracting text from paragraphs
+        # get text from regular paragraphs
         for para in doc.paragraphs:
             text += para.text + "\n"
         
-        # Extracting text from tables
+        # get text from tables in the document
+        # processes cell by cell, row by row
         for table in doc.tables:
             for row in table.rows:
                 for cell in row.cells:
                     text += cell.text + " "
-                text += "\n"  # Newline after each row
+                text += "\n"  # add line break after each row
     
     return text
 
+# function to extract text from powerpoint presentations (.pptx)
+# handles slides, shapes, tables and speaker notes
 def get_pptx_text(pptx_docs):
     text = ""
     
     for pptx in pptx_docs:
         presentation = Presentation(pptx)
         
-        # Loop through each slide in the presentation
+        # process each slide in the presentation
         for slide in presentation.slides:
             
-            # Extract text from shapes (text boxes, titles, etc.)
+            # get text from all shapes (textboxes, titles, etc)
             for shape in slide.shapes:
                 if hasattr(shape, "text"):
                     text += shape.text + "\n"
                 
-                # Check if the shape is a table
+                # handle tables within slides
                 if shape.has_table:
                     table = shape.table
                     for row in table.rows:
                         for cell in row.cells:
-                            text += cell.text + "\t"  # Add a tab space between table columns
-                        text += "\n"  # New line after each row
+                            text += cell.text + "\t"  # separate columns with tabs
+                        text += "\n"  # new line for each row
             
-            # Extract text from speaker notes (if any)
+            # extract speaker notes if they exist
             if slide.has_notes_slide:
                 notes_slide = slide.notes_slide
                 if notes_slide:
@@ -61,7 +67,8 @@ def get_pptx_text(pptx_docs):
                 
     return text
 
-# Function to extract text from XLSX files
+# function to extract text from excel files (.xlsx)
+# processes all sheets and cells with content
 def get_xlsx_text(xlsx_docs):
     text = ""
     for xlsx in xlsx_docs:
@@ -75,35 +82,36 @@ def get_xlsx_text(xlsx_docs):
                 text += "\n"
     return text
 
-# Directory paths
+# set up directory paths for different document types
 pdf_dir = r'modelling\data\pdf_files'
 docx_dir = r'modelling\data\docx_files'
 pptx_dir = r'modelling\data\pptx_files'
 xlsx_dir = r'modelling\data\xlsx_files'
 
-# Fetch file paths
+# get list of files for each document type
+# uses list comprehension to filter files by extension
 pdf_files = [os.path.join(pdf_dir, f) for f in os.listdir(pdf_dir) if f.endswith('.pdf')]
 docx_files = [os.path.join(docx_dir, f) for f in os.listdir(docx_dir) if f.endswith('.docx')]
 pptx_files = [os.path.join(pptx_dir, f) for f in os.listdir(pptx_dir) if f.endswith('.pptx')]
 xlsx_files = [os.path.join(xlsx_dir, f) for f in os.listdir(xlsx_dir) if f.endswith('.xlsx')]
 
-# Extract text for each document type
+# extract text from all document types
 pdf_text = get_pdf_text(pdf_files)
 docx_text = get_docx_text(docx_files)
 pptx_text = get_pptx_text(pptx_files)
 xlsx_text = get_xlsx_text(xlsx_files)
 
-# Define the output file for all extracted text
+# set output file path for combined text
 output_file = os.path.join('modelling', 'extracted_text.txt')
 
-# Function to store all extracted text into one file
+# function to save all extracted text to a single file
 def save_all_text_to_file(texts, file_name):
     with open(file_name, 'w', encoding='utf-8') as f:
         for text_type, text in texts.items():
-            # f.write(f"--- {text_type.upper()} TEXT ---\n")
+            # write text from each document type
             f.write(text + "\n")
 
-# Combine all extracted texts into a dictionary
+# create dictionary of all extracted texts
 all_texts = {
     "pdf": pdf_text,
     "docx": docx_text,
@@ -111,5 +119,5 @@ all_texts = {
     "xlsx": xlsx_text
 }
 
-# Save all text into one file
+# save all extracted text to the output file
 save_all_text_to_file(all_texts, output_file)

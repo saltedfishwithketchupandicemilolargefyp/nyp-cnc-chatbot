@@ -1,23 +1,28 @@
-import os
+# import required libraries for file operations
+import os 
 import shutil
 
-# Define source and target directories
-source_dir = 'CNC chatbot'  # Source folder where your files are located
-target_dir = 'data'         # Target folder to store the separated files
+# define the main directories
+source_dir = 'CNC chatbot'  # where the original mixed files are stored
+target_dir = 'data'         # where we'll organize files by type
 
-# Create subdirectories in the target 'data' folder for each file type
+# list of folders we need to create for different file types
+# each file type will have its own dedicated folder
 file_types = ['pdf_files', 'docx_files', 'xlsx_files', 'pptx_files']
 
+# create subdirectories for each file type
+# exist_ok=True prevents errors if directories already exist
 for file_type in file_types:
     os.makedirs(os.path.join(target_dir, file_type), exist_ok=True)
 
-# Loop through the source directory and subdirectories
+# walk through all directories and subdirectories in the source folder
+# os.walk returns root (current dir), dirs (subdirs), and files in current dir
 for root, dirs, files in os.walk(source_dir):
     for file in files:
-        # Get full file path
+        # construct the full path for each file
         file_path = os.path.join(root, file)
         
-        # Separate files by extension and copy to the appropriate folder in the target directory
+        # check file extension and copy to appropriate target folder
         if file.endswith('.pdf'):
             shutil.copy(file_path, os.path.join(target_dir, 'pdf_files', file))
         elif file.endswith('.docx'):
