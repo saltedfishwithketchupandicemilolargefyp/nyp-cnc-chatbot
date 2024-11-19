@@ -1,12 +1,9 @@
 
-# Project Title
-
-NYP CNC Chatbot
-
+# FYPJ CNC Chatbot
 
 ## Installation
 
-1. Git Clone the repository (Branch: **yq_model**)
+1. Git Clone the repository (Branch: **main**)
 
 2. Install [Python Version 3.10.2](https://www.python.org/downloads/release/python-3102/)
 
@@ -44,7 +41,14 @@ NYP CNC Chatbot
   pip3 install -r requirements.txt
 ```
 
+6. Run app.py and streamlit_app.py
 
+```bash
+
+python app.py
+streamlit run streamlit_app.py
+
+```
 
     
 ## Environment Variables
