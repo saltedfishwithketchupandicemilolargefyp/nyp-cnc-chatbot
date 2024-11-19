@@ -1,0 +1,60 @@
+2024-11-19 23:14:32,175 - INFO - Flask application initialized. Upload folder set up at uploads
+2024-11-19 23:14:32,175 - INFO - Starting Flask application on port 5001.
+2024-11-19 23:14:32,181 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-19 23:14:32,181 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-19 23:16:25,312 - INFO - Flask application initialized. Upload folder set up at uploads
+2024-11-19 23:16:25,312 - INFO - Starting Flask application on port 5001.
+2024-11-19 23:16:25,317 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-19 23:16:25,317 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-19 23:16:32,634 - INFO - File saved: uploads\leehsiengloongdoc.docx
+2024-11-19 23:16:32,731 - INFO - Text extracted and saved to ./modelling/extracted_text.txt
+2024-11-19 23:16:34,860 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:16:41,271 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:16:44,456 - INFO - Vector database updated.
+2024-11-19 23:16:44,456 - INFO - 127.0.0.1 - - [19/Nov/2024 23:16:44] "POST /upload HTTP/1.1" 200 -
+2024-11-19 23:17:03,298 - INFO - File saved: uploads\leehsiengloongdoc.docx
+2024-11-19 23:17:03,359 - INFO - File saved: uploads\leehsiengloongdoc.docx
+2024-11-19 23:17:03,493 - INFO - Text extracted and saved to ./modelling/extracted_text.txt
+2024-11-19 23:17:03,558 - INFO - Text extracted and saved to ./modelling/extracted_text.txt
+2024-11-19 23:17:05,773 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:06,319 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:11,794 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:12,199 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:16,960 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:18,503 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:21,271 - INFO - Vector database updated.
+2024-11-19 23:17:21,272 - INFO - 127.0.0.1 - - [19/Nov/2024 23:17:21] "POST /upload HTTP/1.1" 200 -
+2024-11-19 23:17:22,969 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:25,102 - INFO - Vector database updated.
+2024-11-19 23:17:25,102 - INFO - 127.0.0.1 - - [19/Nov/2024 23:17:25] "POST /upload HTTP/1.1" 200 -
+2024-11-19 23:17:27,084 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-19 23:17:27,088 - INFO - Generated queries: ['The question is straightforward and not complex, so I will proceed with the single question.', 'Who is Lee Hsien Loong?', 'Rephrasings:', '1. What is the background of Lee Hsien Loong?', '2. Can you provide information about Lee Hsien Loong?', '3. Who is the current Prime Minister of Singapore, Lee Hsien Loong?']
+2024-11-19 23:17:27,479 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:28,243 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:28,711 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:29,054 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:29,607 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:30,299 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:17:45,189 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-19 23:17:45,191 - INFO - Question answered: who is lee hsieng loong?
+2024-11-19 23:17:45,191 - INFO - 127.0.0.1 - - [19/Nov/2024 23:17:45] "POST /ask HTTP/1.1" 200 -
+2024-11-19 23:27:49,799 - INFO - Flask application initialized. Upload folder set up at uploads
+2024-11-19 23:27:49,799 - INFO - Starting Flask application on port 5001.
+2024-11-19 23:27:49,809 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-11-19 23:27:49,809 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-19 23:27:56,347 - INFO - Sanitized question: ltscriptgtalertx27Hacked!x27ltscriptgt
+2024-11-19 23:27:59,010 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-19 23:27:59,015 - INFO - Generated queries: ['The query appears to be a single question encoded in a way that suggests a concern about security (specifically an alert that says "Hacked!"). So, I will return it as a single question.', 'Original Question:', '- What does the alert "Hacked!" mean in this context?', 'Rephrasings:', '1. What is the significance of the "Hacked!" alert message?', '2. Can you explain what the "Hacked!" alert indicates?', '3. What implications does the "Hacked!" notification have?']
+2024-11-19 23:27:59,503 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:27:59,994 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:28:00,359 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:28:00,865 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:28:01,421 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:28:01,885 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:28:02,281 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-19 23:28:02,943 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-19 23:28:02,945 - INFO - Question answered: ltscriptgtalertx27Hacked!x27ltscriptgt
+2024-11-19 23:28:02,945 - INFO - 127.0.0.1 - - [19/Nov/2024 23:28:02] "POST /ask HTTP/1.1" 200 -
