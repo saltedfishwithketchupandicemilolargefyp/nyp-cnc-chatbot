@@ -14,9 +14,9 @@ load_dotenv()
 
 # set up configuration variables from environment
 CHROMA_PATH = os.getenv("CHROMA_PATH")
-DATA_PATH = os.getenv("DATA_PATH", "./modelling/extracted_text.txt")
+DATA_PATH = os.getenv("DATA_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
-EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 
 # main function to orchestrate the document processing pipeline
 def main():

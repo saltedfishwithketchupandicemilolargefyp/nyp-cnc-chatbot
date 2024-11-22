@@ -1,5 +1,5 @@
 models:
-  - name: "gpt-4o"          # or replace with your partner's model name
+  - name: "gpt-4o"        
     temperature: 0.7
   - name: "gpt-4o-mini"
     temperature: 0.7

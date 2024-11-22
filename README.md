@@ -60,9 +60,12 @@ streamlit run streamlit_app.py
 
 
 ## Running the Model in Terminal 
-Navigate to modelling folder > modelWithConvoHist.py
+
+Navigate to modelWithConvoHist.py
 
 Right Click code area and Run Python > Run Python File in Terminal
+
+NOTE: To view all the modelling python files required from start to finish, locate to the `yq_model` branch
 
 
     
@@ -71,8 +74,3 @@ Right Click code area and Run Python > Run Python File in Terminal
 To run this project, you will need to add the following environment variable to your .env file
 
 `OPENAI_API_KEY`
-
-To run the model evaluation, you will additionally need this environment variable
-
-`LANGCHAIN_API_KEY`
-
