@@ -68,11 +68,11 @@ Right Click code area and Run Python > Run Python File in Terminal
     
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run this project, you will need to add the following environment variable to your .env file
 
 `OPENAI_API_KEY`
 
-To run the model evaluation, you will additionally need this environment variables
+To run the model evaluation, you will additionally need this environment variable
 
 `LANGCHAIN_API_KEY`
 
