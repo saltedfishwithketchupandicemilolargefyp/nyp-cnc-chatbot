@@ -65,7 +65,7 @@ Navigate to modelWithConvoHist.py
 
 Right Click code area and Run Python > Run Python File in Terminal
 
-NOTE: To view all the modelling python files required from start to finish, locate to the `yq_model` branch
+####NOTE: To view all the modelling python files required from start to finish, locate to the `yq_model` branch
 
 
     
