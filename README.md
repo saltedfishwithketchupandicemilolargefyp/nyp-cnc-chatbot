@@ -50,7 +50,9 @@ To run this project, you will need to add the following environment variables to
 Additionally, to run the model evaluations, these environment variables are also needed.
 
 `LANGCHAIN_API_KEY`
+
 `LANGCHAIN_PROJ_NAME`
+
 `LANGCHAIN_DATASET`
 
 
