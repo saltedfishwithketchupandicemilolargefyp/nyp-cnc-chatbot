@@ -1,6 +1,11 @@
 
 # FYPJ CNC Chatbot
 
+The aim is to build an AI Chatbot that is context specific to the NYP Data Classification Systems. 
+To facilitate and answer potential queries staff have about different CNC related questions, instead of having to search and refer to the documentation files to find the answers. 
+
+
+
 ## Installation
 
 1. Git Clone the repository (Branch: **main**)
@@ -41,7 +46,10 @@
   pip3 install -r requirements.txt
 ```
 
-6. Run app.py and streamlit_app.py
+
+## Running the Model Interface (Frontend & Backend)
+
+Run app.py and streamlit_app.py
 
 ```bash
 
@@ -50,6 +58,12 @@ streamlit run streamlit_app.py
 
 ```
 
+
+## Running the Model in Terminal 
+Navigate to modelling folder > modelWithConvoHist.py
+Right Click code area and Run Python > Run Python File in Terminal
+
+
     
 ## Environment Variables
 
@@ -57,9 +71,7 @@ To run this project, you will need to add the following environment variables to
 
 `OPENAI_API_KEY`
 
+To run the model evaluation, you will additionally need this environment variables
 
-## Steps
+`LANGCHAIN_API_KEY`
 
-Locate the modelWithConvoHist.py file under the modelling folder
-
-Run the file, and use the chatbot as needed.
