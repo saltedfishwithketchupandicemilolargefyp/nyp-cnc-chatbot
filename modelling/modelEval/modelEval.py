@@ -138,7 +138,7 @@ grade_prompt_answer_helpfulness = hub.pull("langchain-ai/rag-answer-helpfulness"
 grader_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 # loading in the dataset
-dataset_name = "RAG Chatbot Dataset"
+dataset_name = os.getenv("LANGCHAIN_DATASET")
 examples = list(client.list_examples(dataset_name=dataset_name))
 
 # prediction functions for evaluation
