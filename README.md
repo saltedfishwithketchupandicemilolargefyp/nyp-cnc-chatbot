@@ -61,6 +61,7 @@ streamlit run streamlit_app.py
 
 ## Running the Model in Terminal 
 Navigate to modelling folder > modelWithConvoHist.py
+
 Right Click code area and Run Python > Run Python File in Terminal
 
 
