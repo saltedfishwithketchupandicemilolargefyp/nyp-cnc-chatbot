@@ -61,9 +61,7 @@ def split_list(chunks, batch_size):
 
 # function to create and populate the vector database with document embeddings
 def create_db(split_chunks):
-    # remove existing database if present
-    if os.path.exists(CHROMA_PATH):
-        shutil.rmtree(CHROMA_PATH)
+    db_exists = os.path.exists(CHROMA_PATH)
     
     # process each batch of chunks and create embeddings
     for chunk in split_chunks:

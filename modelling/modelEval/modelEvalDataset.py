@@ -31,7 +31,7 @@ EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL")
 # setting up tracing project
 callbacks = [
 LangChainTracer(
-  project_name= "fypj-p3-ai-chatbot",
+  project_name= os.getenv("LANGCHAIN_PROJ_NAME"),
   client=Client(
     api_url="https://api.smith.langchain.com",
     api_key=os.getenv("LANGCHAIN_API_KEY")
